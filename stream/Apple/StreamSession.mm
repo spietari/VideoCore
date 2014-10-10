@@ -116,9 +116,10 @@ namespace videocore {
         {
             NSInteger ret = 0;
           
-            
-            ret = [NSOS(m_outputStream) write:buffer maxLength:size];
-            
+            if ( m_status & kStreamStatusWriteBufferHasSpace ) {
+                ret = [NSOS(m_outputStream) write:buffer maxLength:size];
+            }
+
             if(ret >= 0 && ret < size && (m_status & kStreamStatusWriteBufferHasSpace)) {
                 // Remove the Has Space Available flag
                 m_status ^= kStreamStatusWriteBufferHasSpace;

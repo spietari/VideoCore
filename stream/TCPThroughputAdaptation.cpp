@@ -126,7 +126,7 @@ namespace videocore {
                 
                 if(noBuffer && m_bufferSizeSamples.back() > 0) noBuffer = false;
                 
-                //DLog("NB: %d, FT: %f BK: %f\n", noBuffer, frontAvg, backAvg);
+                
                 if(noBuffer && m_bufferSizeSamples.back() == 0 && (!m_hasFirstTurndown || (previousTurndownDiff > kSettlementDelay && previousIncreaseDiff > kIncreaseDelta))) {
                     vec = 1.f;
                 }
@@ -163,7 +163,11 @@ namespace videocore {
                     float a = (detectedBytesPerSec - avg) / turnAvg ;
                     float slope = 3.f * powf(a,2.f);
                     
-                    vec *= std::min(1.f,std::max(atanf(slope) / kPI_2, 0.1f));
+                    vec *= std::min(1.f,std::max(atanf(slope) / kPI_2, 0.05f));
+                    //printf("--------------------\n");
+                    //printf("a: %f slope: %f (%f)\n", a, slope, vec);
+                    //printf("S:%zu Δt:%f AVG:%fB/s TAVG:%f DET:%f\n", totalSent, timeDelta, avg, turnAvg, detectedBytesPerSec);
+                    //printf("--------------------\n");
                 }
 
                 m_previousVector = vec;

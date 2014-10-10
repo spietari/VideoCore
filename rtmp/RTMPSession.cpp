@@ -338,6 +338,7 @@ namespace videocore
     RTMPSession::setClientState(ClientState_t state)
     {
         m_state = state;
+        
         m_callback(*this, state);
     }
     void
@@ -854,7 +855,7 @@ namespace videocore
             std::string code = parseStatusCode(p + 3 + command.length());
             DLog("code : %s\n", code.c_str());
             if (code == "NetStream.Publish.Start") {
-                sendSetChunkSize(4096);
+                sendSetChunkSize(getpagesize());
                 sendHeaderPacket();
                 setClientState(kClientStateSessionStarted);
             }

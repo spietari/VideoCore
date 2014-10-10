@@ -34,13 +34,14 @@
 #define __videocore__AACEncode__
 
 #include <iostream>
-#include <videocore/transforms/ITransform.hpp>
+#include <videocore/transforms/IEncoder.hpp>
 #include <AudioToolbox/AudioToolbox.h>
 #include <videocore/system/Buffer.hpp>
+#include <thread>
 
 namespace videocore { namespace iOS {
 
-    class AACEncode : public ITransform
+    class AACEncode : public IEncoder
     {
     public:
         AACEncode(int frequencyInHz, int channelCount);
@@ -48,11 +49,22 @@ namespace videocore { namespace iOS {
 
         void setOutput(std::shared_ptr<IOutput> output) { m_output = output; };
         void pushBuffer(const uint8_t* const data, size_t size, IMetadata& metadata);
+        
+        void setBitrate(int bitrate) ;
+        
+        const int bitrate() const { return m_bitrate; };
+        
     private:
         static OSStatus ioProc(AudioConverterRef audioConverter, UInt32 *ioNumDataPackets, AudioBufferList* ioData, AudioStreamPacketDescription** ioPacketDesc, void* inUserData );
         void makeAsc(uint8_t sampleRateIndex, uint8_t channelCount);
+        
     private:
-
+        std::mutex              m_converterMutex;
+        
+        AudioClassDescription   m_audioClassDescription[2];
+        AudioStreamBasicDescription m_in;
+        AudioStreamBasicDescription m_out;
+        
         AudioConverterRef       m_audioConverter;
         std::weak_ptr<IOutput>  m_output;
         size_t                  m_bytesPerSample;
@@ -60,6 +72,7 @@ namespace videocore { namespace iOS {
 
         Buffer                  m_outputBuffer;
 
+        int                     m_bitrate;
         uint8_t m_asc[2];
         bool    m_sentConfig;
 

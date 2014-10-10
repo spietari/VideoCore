@@ -81,11 +81,10 @@ namespace videocore { namespace iOS {
     }
     
     AACEncode::AACEncode(int frequencyInHz, int channelCount)
-    : m_sentConfig(false)
+    : m_sentConfig(false), m_bitrate(128000)
     {
         
         OSStatus result = 0;
-        char err[5];
         
         AudioStreamBasicDescription in = {0}, out = {0};
         
@@ -110,7 +109,7 @@ namespace videocore { namespace iOS {
         out.mSampleRate = frequencyInHz;
         out.mChannelsPerFrame = channelCount;
         
-        UInt32 outputBitrate = 128000; // 128 kbps
+        UInt32 outputBitrate = m_bitrate;
         UInt32 propSize = sizeof(outputBitrate);
         UInt32 outputPacketSize = 0;
 
@@ -126,6 +125,11 @@ namespace videocore { namespace iOS {
                 kAppleHardwareAudioCodecManufacturer
             }
         };
+        
+        memcpy(m_audioClassDescription, requestedCodecs, sizeof(requestedCodecs));
+        m_in = in;
+        m_out = out;
+        
         
         result = AudioConverterNewSpecific(&in, &out, 2, requestedCodecs, &m_audioConverter);
 
@@ -220,11 +224,13 @@ namespace videocore { namespace iOS {
             ud->packetSize = static_cast<int>(m_bytesPerSample);
             
             AudioStreamPacketDescription output_packet_desc[num_packets];
-            
+            m_converterMutex.lock();
             AudioConverterFillComplexBuffer(m_audioConverter, AACEncode::ioProc, ud.get(), &num_packets, &l, output_packet_desc);
+            m_converterMutex.unlock();
             
             p += output_packet_desc[0].mDataByteSize;
             p_out += kSamplesPerFrame * m_bytesPerSample;
+            
         }
         const size_t totalBytes = p - m_outputBuffer();
         
@@ -238,6 +244,24 @@ namespace videocore { namespace iOS {
             
             output->pushBuffer(m_outputBuffer(), totalBytes, metadata);
         }
+    }
+    void
+    AACEncode::setBitrate(int bitrate)
+    {
+        if(m_bitrate != bitrate) {
+            m_converterMutex.lock();
+            UInt32 br = bitrate;
+            AudioConverterDispose(m_audioConverter);
+            AudioConverterNewSpecific(&m_in, &m_out, 2, m_audioClassDescription, &m_audioConverter);
+            OSStatus result = AudioConverterSetProperty(m_audioConverter, kAudioConverterEncodeBitRate, sizeof(br), &br);
+            UInt32 propSize = sizeof(br);
+            if(result == noErr) {
+                AudioConverterGetProperty(m_audioConverter, kAudioConverterEncodeBitRate, &propSize, &br);
+                m_bitrate = br;
+            }
+            m_converterMutex.unlock();
+        }
+        
     }
 }
 }
