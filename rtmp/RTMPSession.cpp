@@ -39,7 +39,7 @@
 namespace videocore
 {
     RTMPSession::RTMPSession(std::string uri, RTMPSessionStateCallback callback)
-    : m_streamOutRemainder(65536),m_streamInBuffer(new RingBuffer(4096)), m_uri(http::ParseHttpUrl(uri)), m_callback(callback), m_bandwidthCallback(nullptr), m_outChunkSize(128), m_inChunkSize(128), m_streamId(0),  m_createStreamInvoke(0), m_numberOfInvokes(0), m_state(kClientStateNone), m_ending(false)
+    : m_streamOutRemainder(65536),m_streamInBuffer(new RingBuffer(4096)), m_uri(http::ParseHttpUrl(uri)), m_callback(callback), m_bandwidthCallback(nullptr), m_outChunkSize(128), m_inChunkSize(128), m_streamId(0),  m_createStreamInvoke(0), m_numberOfInvokes(0), m_state(kClientStateNone), m_ending(false), m_sendImmediate(true)
     {
 #ifdef __APPLE__
         m_streamSession.reset(new Apple::StreamSession());
@@ -81,6 +81,7 @@ namespace videocore
     RTMPSession::~RTMPSession()
     {
         DLog("~RTMPSession");
+        m_sendImmediate = true;
         if(m_state == kClientStateConnected) {
             sendDeleteStream();
         }
@@ -103,7 +104,7 @@ namespace videocore
     RTMPSession::setBandwidthCallback(BandwidthCallback callback)
     {
         m_bandwidthCallback = callback;
-        m_throughputSession.setThroughputCallback(callback);
+       // m_throughputSession.setThroughputCallback(callback);
     }
     void
     RTMPSession::pushBuffer(const uint8_t* const data, size_t size, IMetadata& metadata)
@@ -161,7 +162,7 @@ namespace videocore
             p += tosend;
             
             
-            this->write(&outb[0], outb.size(), packetTime);
+            this->write(&outb[0], outb.size(), packetTime, inMetadata.getData<kRTMPMetadataIsKeyframe>() );
             outb.clear();
             
             while(len > 0) {
@@ -185,14 +186,27 @@ namespace videocore
     {
         RTMPMetadata_t md(0.);
         
-        md.setData(metadata.timestamp.data, metadata.msg_length.data, metadata.msg_type_id, metadata.msg_stream_id);
+        md.setData(metadata.timestamp.data, metadata.msg_length.data, metadata.msg_type_id, metadata.msg_stream_id, false);
         
         pushBuffer(data, size, md);
     }
     void
-    RTMPSession::write(uint8_t* data, size_t size, std::chrono::steady_clock::time_point packetTime)
+    RTMPSession::write(uint8_t* data, size_t size, std::chrono::steady_clock::time_point packetTime, bool isKeyframe)
     {
         static std::chrono::steady_clock::time_point previousTimePoint = std::chrono::steady_clock::now();
+        
+        int64_t outToSend=0;
+        int64_t totalSent=0;
+        
+        auto now = std::chrono::steady_clock::now() ;
+        auto diff = now - m_lastSend ;
+        
+        if(isKeyframe && !m_sendImmediate) {
+            for(auto & it : m_streamOutQueue) {
+                outToSend += it.buf->size();
+            }
+            
+        }
         
         if(size > 0) {
             std::shared_ptr<Buffer> buf = std::make_shared<Buffer>(size);
@@ -201,75 +215,69 @@ namespace videocore
             b.buf = buf;
             b.time = packetTime;
             m_streamOutQueue.push_back(b);
-            if(packetTime == previousTimePoint) {
-                return;
-            }
         }
+        
         previousTimePoint = packetTime;
-        if(/*(m_streamSession->status() & kStreamStatusWriteBufferHasSpace) &&*/ m_streamOutRemainder.size()) {
-            
-            
-            size_t size = m_streamOutRemainder.size();
-            uint8_t* buffer = nullptr;
-            
-            size_t ret = m_streamOutRemainder.read(&buffer, size, false); // Read the entire buffer, but do not advance the read pointer.
-            
-            size_t sent = m_streamSession->write(buffer, ret);
-            
-            if( sent == ret && ret < size ) {
-                
-                m_streamOutRemainder.read(&buffer, ret);
-                ret = m_streamOutRemainder.read(&buffer, size - ret, false);
+        
 
-                m_throughputSession.addSentBytesSample(sent);
-                
-                sent = m_streamSession->write(buffer, ret);
-                
+        while((outToSend>0 || m_sendImmediate) && m_streamOutQueue.size() > 0) {
+            auto front = m_streamOutQueue.front().buf ;
+            uint8_t* buf ;
+            size_t ret = front->read(&buf, front->size());
+            if(ret == front->size()) m_streamOutQueue.pop_front() ;
+            else {
+                DLog("Mismatched buffer size! %zu should be %zu", ret, front->size());
             }
             
-            m_throughputSession.addSentBytesSample(sent);
-            
-            m_streamOutRemainder.read(&buffer, sent);
+            int64_t tosend = ret ;
+            int64_t bufsent = 0;
+            while ( tosend > 0 ) {
+                int64_t sent = m_streamSession->write(buf+bufsent, tosend);
+                if(sent <= 0) {
+                    std::mutex m ;
+                    std::unique_lock<std::mutex> l(m);
+                    m_continueSend.wait_until(l, std::chrono::microseconds(1000) + std::chrono::steady_clock::now());
+                }
+                bufsent += sent;
+                tosend -= sent;
+                outToSend -= sent;
+                totalSent += sent;
+            }
+            m_lastSend = now;
         }
         
-        while( m_streamOutQueue.size() > 0 && m_streamOutRemainder.size() == 0) {
+        if( totalSent > 0 ){
+            auto end = std::chrono::steady_clock::now();
+        
+            double send_time = static_cast<double>(std::chrono::duration_cast<std::chrono::microseconds>(end - now).count()) / 1.0e6;
+            double send_window = static_cast<double>(std::chrono::duration_cast<std::chrono::microseconds>(diff).count()) / 1.0e6;
             
-            std::shared_ptr<Buffer> front = m_streamOutQueue.front().buf;
-            size_t sent = 0;
+            int64_t bps = totalSent / send_time ;
             
-            uint8_t* buf;
-            if(front) {
-                size_t size = front->size();
-                front->read(&buf, size);
-                sent = m_streamSession->write(buf, size);
-               
-                m_throughputSession.addSentBytesSample(sent);
-                
-                if ( sent > 0 ) {
-                    m_streamOutQueue.pop_front();
-                    if (sent < size) {
-                         m_streamOutRemainder.put(buf+sent, size-sent);
-                    }
+            
+            if( !m_sendImmediate )  {
+            
+            m_bpsSamples.push_front(bps);
+            
+                if ( m_bpsSamples.size() > 5 ) {
+                    m_bpsSamples.pop_back();
                 }
                 
-                if(sent < size) {
-                    break;
+                int64_t totalBps = 0;
+                for ( auto & it : m_bpsSamples ) {
+                    totalBps += it ;
                 }
+                totalBps /= m_bpsSamples.size();
+                DLog("send time: %g send window: %g total bytes: %lld detected BPS: %lld avg BPS: %lld", send_time, send_window, totalSent, bps, totalBps);
+                float vec = 0.f;
+                if ( totalSent < (totalBps * 0.65) ) {
+                    vec = 1.f;
+                } else if( totalSent > (totalBps * 0.9) ) {
+                    vec = -1.f;
+                }
+                m_bandwidthCallback(vec, totalBps * 0.75);
             }
         }
-        
-        size_t bufferSize = m_streamOutRemainder.size();
-        int64_t bufDur = 0;
-        
-        for (auto & it : m_streamOutQueue) {
-            bufferSize += it.buf->size();
-        }
-        if(m_streamOutQueue.size() > 1) {
-            bufDur = std::chrono::duration_cast<std::chrono::milliseconds>(m_streamOutQueue.back().time - m_streamOutQueue.front().time).count();
-        }
-        m_throughputSession.addBufferDurationSample(bufDur);
-        m_throughputSession.addBufferSizeSample(bufferSize);
-     
     }
     void
     RTMPSession::dataReceived()
@@ -342,6 +350,12 @@ namespace videocore
     void
     RTMPSession::setClientState(ClientState_t state)
     {
+        if(state == kClientStateSessionStarted) {
+            m_sendImmediate = false;
+            m_lastSend = std::chrono::steady_clock::now();
+        } else {
+            m_sendImmediate = true;
+        }
         m_state = state;
         m_callback(*this, state);
     }
@@ -358,9 +372,10 @@ namespace videocore
             if(m_state < kClientStateHandshakeComplete) {
                 handshake();
             } else if (!m_ending) {
-                m_jobQueue.enqueue([this]() {
+               /* m_jobQueue.enqueue([this]() {
                     this->write(nullptr, 0);
-                });
+                });*/
+                m_continueSend.notify_all();
             }
         }
         if(status & kStreamStatusEndStream) {

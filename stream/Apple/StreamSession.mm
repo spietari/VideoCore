@@ -112,26 +112,34 @@ namespace videocore {
             return unread;
         }
         size_t
-        StreamSession::write(uint8_t *buffer, size_t size)
+        StreamSession::write(uint8_t *buffer, int64_t size)
         {
             NSInteger ret = 0;
           
-            if( NSOS(m_outputStream).hasSpaceAvailable ) {
-                ret = [NSOS(m_outputStream) write:buffer maxLength:size];
+            bool hasSpaceAvailable = NSOS(m_outputStream).hasSpaceAvailable ;
+            
+            if(size > 0 && buffer) {
+                if( hasSpaceAvailable ) {
+                    ret = [NSOS(m_outputStream) write:buffer maxLength:size];
+                }
+                if(ret >= 0 && ret < size && (m_status & kStreamStatusWriteBufferHasSpace)) {
+                    // Remove the Has Space Available flag
+                    m_status ^= kStreamStatusWriteBufferHasSpace;
+                }
+                else if (ret < 0) {
+                    DLog("ERROR: %@ [%ld] buffer: %p [ 0x%02x ], size: %lld\n",
+                         NSOS(m_outputStream).streamError.localizedDescription,
+                         (long)NSOS(m_outputStream).streamError.code,
+                         buffer,
+                         buffer[0],
+                         size);
+                }
             }
-            if(ret >= 0 && ret < size && (m_status & kStreamStatusWriteBufferHasSpace)) {
-                // Remove the Has Space Available flag
-                m_status ^= kStreamStatusWriteBufferHasSpace;
-            }
-            else if (ret < 0) {
-                DLog("ERROR! [%ld] buffer: %p [ 0x%02x ], size: %zu\n", (long)NSOS(m_outputStream).streamError.code, buffer, buffer[0], size);
-            }
-
             return ret;
         }
         
         size_t
-        StreamSession::read(uint8_t *buffer, size_t size)
+        StreamSession::read(uint8_t *buffer, int64_t size)
         {
             size_t ret = 0;
             

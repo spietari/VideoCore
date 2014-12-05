@@ -64,10 +64,11 @@ namespace videocore
         kRTMPMetadataTimestamp=0,
         kRTMPMetadataMsgLength,
         kRTMPMetadataMsgTypeId,
-        kRTMPMetadataMsgStreamId
+        kRTMPMetadataMsgStreamId,
+        kRTMPMetadataIsKeyframe
     };
     
-    typedef MetaData<'rtmp', int32_t, int32_t, uint8_t, int32_t> RTMPMetadata_t;
+    typedef MetaData<'rtmp', int32_t, int32_t, uint8_t, int32_t, bool> RTMPMetadata_t;
     
     using RTMPSessionStateCallback = std::function<void(RTMPSession& session, ClientState_t state)>;
     
@@ -93,7 +94,7 @@ namespace videocore
         
         
         void streamStatusChanged(StreamStatus_t status);
-        void write(uint8_t* data, size_t size, std::chrono::steady_clock::time_point packetTime = std::chrono::steady_clock::now());
+        void write(uint8_t* data, size_t size, std::chrono::steady_clock::time_point packetTime = std::chrono::steady_clock::now(), bool isKeyframe = false);
         void dataReceived();
         void setClientState(ClientState_t state);
         void handshake();
@@ -126,7 +127,7 @@ namespace videocore
         RingBuffer          m_streamOutRemainder;
         Buffer              m_s1, m_c1;
         
-        TCPThroughputAdaptation m_throughputSession;
+        //TCPThroughputAdaptation m_throughputSession;
         
         std::deque<BufStruct> m_streamOutQueue;
         
@@ -143,8 +144,12 @@ namespace videocore
         std::string                     m_app;
         std::map<int32_t, std::string>  m_trackedCommands;
         
+        std::chrono::steady_clock::time_point m_lastSend;
+        
         size_t          m_outChunkSize;
         size_t          m_inChunkSize;
+        
+        std::condition_variable m_continueSend;
         
         int32_t         m_streamId;
         int32_t         m_createStreamInvoke;
@@ -156,8 +161,12 @@ namespace videocore
         double          m_audioSampleRate;
         bool            m_audioStereo;
         
-        ClientState_t  m_state;
+        std::deque<int64_t> m_bpsSamples;
         
+        ClientState_t   m_state;
+        
+        bool            m_sendImmediate;
+    
         bool            m_ending;
     };
 }
