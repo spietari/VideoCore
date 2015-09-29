@@ -15,30 +15,7 @@
   "requires_arc": false,
   "header_dir": "videocore",
   "header_mappings_dir": ".",
-  "source_files": [
-    "mixers/**/*.h*",
-    "mixers/**/*.cpp",
-    "mixers/**/*.m*",
-    "rtmp/**/*.h*",
-    "rtmp/**/*.cpp",
-    "rtmp/**/*.m*",
-    "sources/**/*.h*",
-    "sources/**/*.cpp",
-    "sources/**/*.m*",
-    "stream/**/*.h*",
-    "stream/**/*.cpp",
-    "stream/**/*.m*",
-    "system/**/*.h*",
-    "system/**/*.cpp",
-    "system/**/*.m*",
-    "transforms/**/*.h*",
-    "transforms/**/*.cpp",
-    "transforms/**/*.m*",
-    "api/**/*.h*",
-    "api/**/*.m*",
-    "filters/**/*.cpp",
-    "filters/**/*.h*"
-  ],
+  "source_files": "api/**/*.{h*,m*}",
   "frameworks": [
     "VideoToolbox",
     "AudioToolbox",
@@ -67,5 +44,47 @@
   },
   "platforms": {
     "ios": "5.0"
-  }
+  },
+  "subspecs": [
+    {
+      "name": "Mixers",
+      "source_files": "mixers/**/*.{h*,cpp,m*}"
+    },
+    {
+      "name": "RTMP",
+      "source_files": "rtmp/**/*.{h*,cpp,m*}"
+    },
+    {
+      "name": "Sources",
+      "source_files": "sources/**/*.{h*,cpp,m*}"
+    },
+    {
+      "name": "Stream",
+      "source_files": "stream/**/*.{h*,cpp,m*}"
+    },
+    {
+      "name": "System",
+      "source_files": "system/**/*.{h*,cpp,m*}"
+    },
+    {
+      "name": "Transforms-Apple",
+      "source_files": "transforms/Apple/*.{h*,cpp,m*}"
+    },
+    {
+      "name": "Transforms-RTMP",
+      "source_files": "transforms/RTMP/*.{h*,cpp,m*}"
+    },
+    {
+      "name": "Transforms-iOS",
+      "source_files": "transforms/iOS/*.{h*,cpp,m*}"
+    },
+    {
+      "name": "Transforms",
+      "source_files": "transforms/*.{h*,cpp,m*}"
+    },
+    {
+      "name": "Filters",
+      "source_files": "filters/**/*.{h*,cpp}"
+    }
+  ]
 }

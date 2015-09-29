@@ -20,15 +20,66 @@ PODS:
     - boost (~> 1.51.0)
     - glm (~> 0.9.4.6)
     - UriParser-cpp (~> 0.1.3)
+    - VideoCore/Filters (= 0.3.2)
+    - VideoCore/Mixers (= 0.3.2)
+    - VideoCore/RTMP (= 0.3.2)
+    - VideoCore/Sources (= 0.3.2)
+    - VideoCore/Stream (= 0.3.2)
+    - VideoCore/System (= 0.3.2)
+    - VideoCore/Transforms (= 0.3.2)
+    - VideoCore/Transforms-Apple (= 0.3.2)
+    - VideoCore/Transforms-iOS (= 0.3.2)
+    - VideoCore/Transforms-RTMP (= 0.3.2)
+  - VideoCore/Filters (0.3.2):
+    - boost (~> 1.51.0)
+    - glm (~> 0.9.4.6)
+    - UriParser-cpp (~> 0.1.3)
+  - VideoCore/Mixers (0.3.2):
+    - boost (~> 1.51.0)
+    - glm (~> 0.9.4.6)
+    - UriParser-cpp (~> 0.1.3)
+  - VideoCore/RTMP (0.3.2):
+    - boost (~> 1.51.0)
+    - glm (~> 0.9.4.6)
+    - UriParser-cpp (~> 0.1.3)
+  - VideoCore/Sources (0.3.2):
+    - boost (~> 1.51.0)
+    - glm (~> 0.9.4.6)
+    - UriParser-cpp (~> 0.1.3)
+  - VideoCore/Stream (0.3.2):
+    - boost (~> 1.51.0)
+    - glm (~> 0.9.4.6)
+    - UriParser-cpp (~> 0.1.3)
+  - VideoCore/System (0.3.2):
+    - boost (~> 1.51.0)
+    - glm (~> 0.9.4.6)
+    - UriParser-cpp (~> 0.1.3)
+  - VideoCore/Transforms (0.3.2):
+    - boost (~> 1.51.0)
+    - glm (~> 0.9.4.6)
+    - UriParser-cpp (~> 0.1.3)
+  - VideoCore/Transforms-Apple (0.3.2):
+    - boost (~> 1.51.0)
+    - glm (~> 0.9.4.6)
+    - UriParser-cpp (~> 0.1.3)
+  - VideoCore/Transforms-iOS (0.3.2):
+    - boost (~> 1.51.0)
+    - glm (~> 0.9.4.6)
+    - UriParser-cpp (~> 0.1.3)
+  - VideoCore/Transforms-RTMP (0.3.2):
+    - boost (~> 1.51.0)
+    - glm (~> 0.9.4.6)
+    - UriParser-cpp (~> 0.1.3)
 
 DEPENDENCIES:
   - glm (from `https://github.com/maxcampolo/glm.git`)
-  - VideoCore (from `https://github.com/maxcampolo/VideoCore.git`)
+  - VideoCore (from `https://github.com/maxcampolo/VideoCore.git`, branch `podspec_refactor`)
 
 EXTERNAL SOURCES:
   glm:
     :git: https://github.com/maxcampolo/glm.git
   VideoCore:
+    :branch: podspec_refactor
     :git: https://github.com/maxcampolo/VideoCore.git
 
 CHECKOUT OPTIONS:
@@ -36,13 +87,13 @@ CHECKOUT OPTIONS:
     :commit: a101bfbe2a5e0f2441a4311ca7601298d0dfe0e7
     :git: https://github.com/maxcampolo/glm.git
   VideoCore:
-    :commit: 823ec7cac50e5a0b4457bd06dd95a50dca88d9c0
+    :commit: 3661f0389d254b2c9f6b76fe2facebfcd5c184ce
     :git: https://github.com/maxcampolo/VideoCore.git
 
 SPEC CHECKSUMS:
   boost: 6c5c8d8daef26ac83c1e1c00ad14de62b80161d7
   glm: df8ca1b7e522a3cca213bb2913d666b6579c8d78
   UriParser-cpp: cbbe00080ee432ec4833dca863a7fc83adc9b01a
-  VideoCore: ee91bb8b71919ac7a1cbc752b72272fc53a0567f
+  VideoCore: 5ad6924dbc7e93026e1843d88a9c3ab9ff6fd9cb
 
 COCOAPODS: 0.39.0.beta.4
