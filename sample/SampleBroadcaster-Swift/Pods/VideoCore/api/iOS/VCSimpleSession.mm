@@ -36,7 +36,7 @@
 #ifdef __APPLE__
 #   include <videocore/mixers/Apple/AudioMixer.h>
 #   include <videocore/transforms/Apple/MP4Multiplexer.h>
-#   include <videocore/transforms/Apple/H264Encode_apple.h>
+#   include <videocore/transforms/Apple/H264Encode.h>
 #   include <videocore/sources/Apple/PixelBufferSource.h>
 #   ifdef TARGET_OS_IPHONE
 #       include <videocore/sources/iOS/CameraSource.h>

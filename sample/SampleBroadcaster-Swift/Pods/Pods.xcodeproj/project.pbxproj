@@ -1,0 +1,1329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		003A6105AD330A32334C02E204AA1DD9 /* IEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F79D9AE45B518EEAB7481AABC49D82D6 /* IEncoder.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		0468C936D74AE23CF1797864BC553B6C /* IMetaData.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A91F4B388914CCE4D5A0B8382DD34981 /* IMetaData.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		07DDE8B051ABFFDEE78DE4DC48E17DC2 /* IOutputSession.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E9A394516A14E6BDDA43C836485BA201 /* IOutputSession.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B19C7B2A12A3D568E91BDC49C79B749 /* GrayscaleVideoFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C729C0FF8CACED0D28BEB5D5F0F1CC5 /* GrayscaleVideoFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C82E7062E3E785A9B247F2BE93F3514 /* GLESVideoMixer.mm in Sources */ = {isa = PBXBuildFile; fileRef = CB2CE9228B353D45F1A607F448234DFB /* GLESVideoMixer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0CCFEC23674B8138E822225F43025F26 /* IOutput.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AEF98F26E84F829E5FB6AD41CB3D4C46 /* IOutput.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E3086118EA77BF92044F36B8B51795C /* GenericAudioMixer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A99413BB5CAA9AC1649015C8B94B9B44 /* GenericAudioMixer.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0E51DF4E447BB55EC0F093A3B8B54AFF /* PixelBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 75106AE62E97BFACC5DBC95749FA54CB /* PixelBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F49E2546B7BDEF58039D0A82139F0C7 /* ITransform.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9FE567090F9CC6C4E9BE09083C73D616 /* ITransform.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		12D48D64B3B5671A704267EF094F4B3B /* VideoCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5267A77E7898FA451354E4B613526797 /* VideoCore-dummy.m */; };
+		1443A33F88582D8FA5CDB3207EA81EB4 /* IThroughputAdaptation.h in Headers */ = {isa = PBXBuildFile; fileRef = 84ABA6ED2E6F05B2C6A347EE4EA426F3 /* IThroughputAdaptation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17834028EE41A4E0B742BBBBC2BFD062 /* Golomb.h in Headers */ = {isa = PBXBuildFile; fileRef = F2382D7E80AE20BECD05E3F76B8756C6 /* Golomb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B3CA7D9FC827A708AAE881FF683F2C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C962636EB84D54AE3F4C41CB612CD31 /* Foundation.framework */; };
+		23EDA20F5F27D37A2970EDA4974A8E2E /* ISource.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 786FB5A41390B5E950908D6A77B6C6E6 /* ISource.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CD246EE1FBD1A038E6991AE0A1632DF /* RTMPSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08F07B36036BA6F692F1B7FC98BD0041 /* RTMPSession.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		311AAC558833C0A1BAD6051387C4F2FD /* AudioMixer.h in Headers */ = {isa = PBXBuildFile; fileRef = 314FE6BF7AC3097FA9D807B833BBAAE5 /* AudioMixer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34BEE87D7CD21BA75D00383948E8401C /* PositionTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 561F5E9E13BC2A15DDD785FBB2766209 /* PositionTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3682291B4672643A7FB4059B816EC37C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C962636EB84D54AE3F4C41CB612CD31 /* Foundation.framework */; };
+		3741CDE9BE464CE78DE713FB58E8484F /* GlowVideoFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E1C21D627CB6527B84525EFE5AEEE942 /* GlowVideoFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38214A8D5281D4AAC1CC5D7CD2048A5A /* StreamSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 3412A68AD8081DB07B0925FEF703D147 /* StreamSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3970E2ED1A964CAF5656FF05E1B3CF45 /* MP4Multiplexer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39455A273AE6AB3D5150F573058A7F65 /* MP4Multiplexer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3ED9F8B865544BBEACC5DE6F2C6840F5 /* CameraSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 73005779F87B7CB4E814B45A4C126E4E /* CameraSource.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3F70F6F58096F8DA3533E3BE47DA9E16 /* FisheyeVideoFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 29AA6383867FD4C658551E4D3F515ACF /* FisheyeVideoFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4801D1A3A684F90C5F1BAEF9D772BFB4 /* TCPThroughputAdaptation.h in Headers */ = {isa = PBXBuildFile; fileRef = C0DC6359791A93A02F8DE97E76543EC4 /* TCPThroughputAdaptation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		493EC56DE129C6FCFCCD842E38569B45 /* BasicVideoFilterBGRA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535B97270163768302371409627E1D5C /* BasicVideoFilterBGRA.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4A58E6B06A64B6F1CA901787E147E581 /* VCPreviewView.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A480D05567233FA3E0DD03A3B586C3 /* VCPreviewView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A87667333248B337D5D74AC69E90AC7 /* GLESVideoMixer.h in Headers */ = {isa = PBXBuildFile; fileRef = 990FE94B6118C65669777B3CA3730237 /* GLESVideoMixer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B060E4F434D9603624E730B44041FF3 /* Split.h in Headers */ = {isa = PBXBuildFile; fileRef = 370699770F7B3C66195174C951C197EA /* Split.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52DCBEC7E583CE347E1C99355693AF3D /* Golomb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45932AA01F489A9ADF89C5AC62F3E436 /* Golomb.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5599A04FB0C2A4C39F06039463A8C802 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC0348328B7A4A56A8362F005EA8374 /* util.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		590088070FFE86EED127682011B54A26 /* UriParser-cpp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E455615EC74CAEAD6F259E7454A16B /* UriParser-cpp-dummy.m */; };
+		5A65EDC6AFFD8E03B49D72D5514790E8 /* AudioMixer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FAA3383FAC725E4DB6329AEFEBA39E0 /* AudioMixer.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5A9123D66A045416AFD9085677A1E678 /* PixelBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F71B6DAAEA566821896A3A2945CAE /* PixelBuffer.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5EE9C74B798345DD8237FE73D9A5F537 /* RTMPTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CC67662CFE9E336AC0430F3FEECDC040 /* RTMPTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F94E52F3DA73E7868CF94A923950319 /* GlowVideoFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96D625905E21C01A044DE28A28EF0D3E /* GlowVideoFilter.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		607CF3140A77B4CA4AA05F7F218CFC11 /* H264Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 6565C82D4E3F3DECBE2E9EA002074618 /* H264Encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60D74A0D182AF72717A286A08D832A45 /* GLESUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1306C5ABF69CA02F2E55B6388AB9E6E6 /* GLESUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61FB67F63D2F55CBC87C5EFD277BD66E /* GrayscaleVideoFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17031C3520D66FEF54A87AB2DE80FA2A /* GrayscaleVideoFilter.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		682C28BB973FB0832E73EBD5EB8B7F61 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F021A9FA0F7EA48C428A2146A33B434B /* Pods-dummy.m */; };
+		6AE1A91C5D84DC45C39FA120C7310174 /* StreamSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E71A908697DC2EE7EE9A7CB470CD3 /* StreamSession.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6F17821F90BED143AAC8B6CCB3A68F3E /* Split.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A55B5EECB19C44BC077D195D2C9B3B /* Split.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		70B4854E2E00835B5EDEABEAEB45B77B /* BasicVideoFilterBGRAinYUVAout.h in Headers */ = {isa = PBXBuildFile; fileRef = CB9EC134A2D4B352458B6C6BE975AB25 /* BasicVideoFilterBGRAinYUVAout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72F891A4FEC84FAB6C2926CD48C3629D /* MicSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0077AEB2C15142728BD6C5314B8B3F65 /* MicSource.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		73334424D5959BBC45365FDAEA4560A0 /* VCPreviewView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7729B66A2C98030C1683290FF6FA941D /* VCPreviewView.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		73831CFF5BA9E1D5526B9B9905DA1F2C /* AspectTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = E4331D7B1065B3F8E480D54F41232BE1 /* AspectTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73A204BC2E940355F83F8E7563B1EDA7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B88FABE233137E8DB05413D26309792 /* CFNetwork.framework */; };
+		771F33C4858C917A055E049E79B3D761 /* InvertColorsVideoFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 890D3EFB6AD02DB624473A849A30DEC7 /* InvertColorsVideoFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		792D357EC494CA76DD36370FDC3B3C5A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762F296089060CF85B6D0191541F52C4 /* OpenGLES.framework */; };
+		7A855BA1834C76F6B9BB69475012C688 /* VideoCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1392B4B1426AB4BA0B7AC7F405447B9 /* VideoCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B826241C64818F71010685241DA6521 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9417FDD46CF274654FC77439DBF6EB3 /* CoreMedia.framework */; };
+		7F0CE3ABD72CC9A72B7E9F2391125F51 /* IVideoMixer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 38C17182EC71AEA217EB26826B3C0916 /* IVideoMixer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		84840E15DD8395BB17150D07891ABA2A /* FilterFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B0C1A9E8129AB7E54FD76ACFF9F7A1D /* FilterFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85D6805A42C648B79DBB01A4E20CBC39 /* IStreamSession.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9B11257115349682F2C1B81086EB14E5 /* IStreamSession.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		878500C1EF6A270313EE0F8557B38DD0 /* AACEncode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D154CCA633E4FDF135C1B067BA634D3 /* AACEncode.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8CF172CC19EC44FA8358155811760A83 /* H264Packetizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CBEFA0E96502DEC41ADDDF46B7C0CC7 /* H264Packetizer.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		90333F8201CA606E00F237E96F3948BB /* MicSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7541ED8117D72918C8510D5B500B2F /* MicSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9090FF53C060F78D6FD5B0C9BC8E2129 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5674F3F5BC916C5B5D82DBBBC38FF69F /* AudioToolbox.framework */; };
+		9206C00BB24CF413DAB8B12597F76C62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6005B24BFDD09121AACC50E9A6F1D84 /* CoreGraphics.framework */; };
+		999C7E850B1F3F834D880AD34E2E6F87 /* PixelBufferSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 08C44484026EEBCC5B1B0C9B9653C217 /* PixelBufferSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99E1069B7023ADE4478FD6D89CF3C602 /* IMixer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 01918FA5C52AD8E696B6E8D30C00EDBE /* IMixer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BFC4B510357C15C594FC55850F692B8 /* SepiaVideoFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 031D8B088B2983A4ACC28135C45B659B /* SepiaVideoFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E7915F33A90075DF346C2852F194A75 /* VCSimpleSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8C88C5AB7DC8A6D548B7AB1A9E7808B /* VCSimpleSession.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9F1B12F4F8EB18A08259666282EE4518 /* AACPacketizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79840669DC89C3CF316FEA1C8BDCCEF /* AACPacketizer.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9FDF930981043FADEA89BF369258B816 /* PositionTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 851336D8F21110554C4F7AA6DCDE0650 /* PositionTransform.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A406D46710871F73938466A7AE175FA1 /* IFilter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07A393D79C1754CDBA14176C5FCCF64D /* IFilter.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		A46EF5CABBB144E96E3AA60E6846E652 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDFE739C3CC59437AB62331F929A39A /* CoreVideo.framework */; };
+		A5C9C109C34A969B8F5BB13D458B9301 /* SepiaVideoFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C464A98A7B400A0C5939EDDD05BCB468 /* SepiaVideoFilter.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A73E7E6DCD5F5E1907743BC9BC392B30 /* AACEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 733FBFCCB6DAA3556FBB3961536FA902 /* AACEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8792217F4EDFCD4625FACBBAE2DCC94 /* GenericPixelBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 84955D5AC207F63863AA57FF874E2BCC /* GenericPixelBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A909BED9ED853C0474F658025048E817 /* UriCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49909F494B65B54C7E78A9003FFDBF15 /* UriCodec.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A9ADE940148CE50259F3A6437731BE53 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48F11309FD2B3B6FA8EA6264A0140A2D /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1AA3B1FC88ABD191DE66167935A849C /* GenericAudioMixer.h in Headers */ = {isa = PBXBuildFile; fileRef = AA321280D58E859FEE299FCEFFF21089 /* GenericAudioMixer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6141B848B5676C22974D10BD0C36530 /* H264Encode.mm in Sources */ = {isa = PBXBuildFile; fileRef = E35C2E6307A4F064EAF099A06D75F956 /* H264Encode.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B72C81356524711F2D3E4DE56E0C11EB /* IVideoFilter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8499EFD2FEEA39B5C61522B2645A4284 /* IVideoFilter.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE8F108069AF19A906797224CFD4A8EC /* IAudioMixer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7E35AF6AA30A662D70F1B8C649DD09F7 /* IAudioMixer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF20A52ED3998222F5E713FC8E9AA70E /* FilterFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DACB38FFCF83626D53AC211ACA484827 /* FilterFactory.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BF40B152D74FD2999632F5A6F307B91F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C962636EB84D54AE3F4C41CB612CD31 /* Foundation.framework */; };
+		C3EF35F60D80A9F546A93224F1EC4C42 /* Buffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7D24E63E9746DF729D2FCD1FABA8C559 /* Buffer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		C464A68ED9FEFB886755967F447B524D /* H264Packetizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482D3C7F4D0B525C8E39B2411A2CC0F /* H264Packetizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC2DF84E4DC82F292AE4EC8D882044DA /* MP4Multiplexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 34425BB8AE4D8CA145EC8238294E4BDF /* MP4Multiplexer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D083A67C34B28A07B819790DA2B85DD1 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9E98DA1CAAC33473412CBEF65C5007 /* VideoToolbox.framework */; };
+		D0ADDB781C6D5666AFDB9A1EDE5FC964 /* H264Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7CF3EB356221726A6D76CFA5D99EE6 /* H264Encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1A46E3FE3630BAF0F74D1F336C6F30E /* InvertColorsVideoFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9090C5B3401C13658A729D2E8E674B9 /* InvertColorsVideoFilter.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D327ACC34CB8EEBC920A3E1AC2F7A256 /* IPixelBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = CDF1BD14504E7844B3AB7530C7AEC0F5 /* IPixelBuffer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4EEDA5DC301533ECFA0B80A8DC07B33 /* AspectTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 594EEE6104190AA2A1BC3EA45CBD791D /* AspectTransform.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D587851EF1B357CFFF4FB0DEA0CB738A /* UriParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6EF2AC78681C71871B4F7276AF6896B /* UriParser.framework */; };
+		D879C8C3F5C9F680C9CB5C57291B5D88 /* UriParser-cpp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B80BE752AD95B5BFC3F6AC1E884B72 /* UriParser-cpp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D93CA5BBD298F888C81846994CE3C784 /* VCSimpleSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 1240B422F2E0588ED8F4537E95BA78B0 /* VCSimpleSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9606A750000983D13BF6C94DD56FFD7 /* TCPThroughputAdaptation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C7A69DF619AFE6C423B7A2FBAF036D /* TCPThroughputAdaptation.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9825D728F6BBB46999E79168842C6BF /* RTMPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 66EA1CECBEFBE2E12CE4A92510C69671 /* RTMPSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAB4581B33CB8459BFDF8D1DD75DA0EA /* BasicVideoFilterBGRAinYUVAout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24D94E9E9CB01182436744868117334E /* BasicVideoFilterBGRAinYUVAout.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E3A66CADF105154711F587164CD98575 /* GenericPixelBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDFC38BBCF8C44567203659282B8F414 /* GenericPixelBuffer.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E6D84E2840697BE3BBA9FD14B45FEF6E /* H264Encode.mm in Sources */ = {isa = PBXBuildFile; fileRef = E11A50C0765A51465B893268618A03EA /* H264Encode.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E846135D1B181E1AB89035AF1C4EE39C /* FisheyeVideoFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1EBB72E8BB5CE6DF2FAD08E165DFC /* FisheyeVideoFilter.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E8BAE7C44C5D6BB9E9CD9BD7FDFF3E50 /* PixelBufferSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9B4ADEA027A29388FC812B5B134DCDD6 /* PixelBufferSource.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EEF6613F58CD7D1A9EF243B99509257D /* BasicVideoFilterBGRA.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C313C8C7AF311FA1F16E07008F9491E /* BasicVideoFilterBGRA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA3203BE00B06CB4F4647925103EC647 /* JobQueue.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DB8A8C04D2155A9BD207B70AAA065014 /* JobQueue.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC63BDB1C011142A4DDAE8D8A0FF355F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03F48489B1B6CC622434959318C56B8 /* AVFoundation.framework */; };
+		FD87F2980DA6E11362CF3AFD060189EA /* AACPacketizer.h in Headers */ = {isa = PBXBuildFile; fileRef = D91E58764E7F06E9C2054C2DD82858EC /* AACPacketizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6642C290157A179D90D0B603BBF1D4 /* UriParser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FE8A756F8F28042414B8ED722FE94C61 /* UriParser.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE8CEE9C9E77C4659E5F645746B8CBCC /* CameraSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FBDDCD2706A1585538595FC73C5149D6 /* CameraSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F0D853B85592389CABB4FC0BD1C0075 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 993FEDE84EE302E8C1025B798ACFC30A;
+			remoteInfo = "UriParser-cpp";
+		};
+		F68849ABAD9E066780A8A987FB3789EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 993FEDE84EE302E8C1025B798ACFC30A;
+			remoteInfo = "UriParser-cpp";
+		};
+		FF1C047390F499C59F5E105C58812284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42D295D4DD9CA34DD72E018404351403;
+			remoteInfo = VideoCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0077AEB2C15142728BD6C5314B8B3F65 /* MicSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MicSource.mm; path = sources/iOS/MicSource.mm; sourceTree = "<group>"; };
+		00A55B5EECB19C44BC077D195D2C9B3B /* Split.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Split.cpp; path = transforms/Split.cpp; sourceTree = "<group>"; };
+		00AA34E97DD31B01A7B591A72F8EBE47 /* UriParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UriParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00B54AFE45D43E38C8C05867F27232FC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		011AD23DC8314CBA8A506023D46E8B73 /* handed_coordinate_space.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = handed_coordinate_space.hpp; path = glm/gtx/handed_coordinate_space.hpp; sourceTree = "<group>"; };
+		0133DD7D24707C50AAA0B474D81DEF5D /* round.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = round.hpp; path = glm/gtc/round.hpp; sourceTree = "<group>"; };
+		01918FA5C52AD8E696B6E8D30C00EDBE /* IMixer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = IMixer.hpp; path = mixers/IMixer.hpp; sourceTree = "<group>"; };
+		031D8B088B2983A4ACC28135C45B659B /* SepiaVideoFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SepiaVideoFilter.h; path = filters/Basic/SepiaVideoFilter.h; sourceTree = "<group>"; };
+		0482D3C7F4D0B525C8E39B2411A2CC0F /* H264Packetizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = H264Packetizer.h; path = transforms/RTMP/H264Packetizer.h; sourceTree = "<group>"; };
+		04858143B0102CFF8C9B417F7E38C25E /* common.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = common.hpp; path = glm/common.hpp; sourceTree = "<group>"; };
+		076CD91D6DB27EA7ADFE6ADEC1AEB216 /* simd_mat4.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = simd_mat4.hpp; path = glm/gtx/simd_mat4.hpp; sourceTree = "<group>"; };
+		07A393D79C1754CDBA14176C5FCCF64D /* IFilter.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = IFilter.hpp; path = filters/IFilter.hpp; sourceTree = "<group>"; };
+		08C44484026EEBCC5B1B0C9B9653C217 /* PixelBufferSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PixelBufferSource.h; path = sources/Apple/PixelBufferSource.h; sourceTree = "<group>"; };
+		08CF8A045C938D7C1DA14A136D40B583 /* io.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = io.hpp; path = glm/gtx/io.hpp; sourceTree = "<group>"; };
+		08F07B36036BA6F692F1B7FC98BD0041 /* RTMPSession.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = RTMPSession.cpp; path = rtmp/RTMPSession.cpp; sourceTree = "<group>"; };
+		0A5E9B7198AC8890CC9C64D8A8DA24BC /* fwd.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = fwd.hpp; path = glm/fwd.hpp; sourceTree = "<group>"; };
+		0B0C1A9E8129AB7E54FD76ACFF9F7A1D /* FilterFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FilterFactory.h; path = filters/FilterFactory.h; sourceTree = "<group>"; };
+		0B3F6A6DA6098AEA137F15D9A9FDD53A /* fast_trigonometry.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = fast_trigonometry.hpp; path = glm/gtx/fast_trigonometry.hpp; sourceTree = "<group>"; };
+		0C313C8C7AF311FA1F16E07008F9491E /* BasicVideoFilterBGRA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicVideoFilterBGRA.h; path = filters/Basic/BasicVideoFilterBGRA.h; sourceTree = "<group>"; };
+		0D4C7F1C01B3BCD8BC2DCF0FEC525229 /* UriParser-cpp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UriParser-cpp.xcconfig"; sourceTree = "<group>"; };
+		1240B422F2E0588ED8F4537E95BA78B0 /* VCSimpleSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCSimpleSession.h; path = api/iOS/VCSimpleSession.h; sourceTree = "<group>"; };
+		1249C866A3563DB9A2B3A4C73D292132 /* matrix_transform_2d.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix_transform_2d.hpp; path = glm/gtx/matrix_transform_2d.hpp; sourceTree = "<group>"; };
+		1285BA6881413517D3E372BB20E54BFB /* func_common.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = func_common.hpp; path = glm/detail/func_common.hpp; sourceTree = "<group>"; };
+		1306C5ABF69CA02F2E55B6388AB9E6E6 /* GLESUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GLESUtil.h; path = sources/iOS/GLESUtil.h; sourceTree = "<group>"; };
+		145C39AF76BA468BDB619597C0EE36AE /* simd_vec4.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = simd_vec4.hpp; path = glm/gtx/simd_vec4.hpp; sourceTree = "<group>"; };
+		162A02D0BB7E71E263E059E957B72A9D /* VideoCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VideoCore-prefix.pch"; sourceTree = "<group>"; };
+		17031C3520D66FEF54A87AB2DE80FA2A /* GrayscaleVideoFilter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GrayscaleVideoFilter.cpp; path = filters/Basic/GrayscaleVideoFilter.cpp; sourceTree = "<group>"; };
+		188E841FED862D8A6494EBFD58D4E90F /* type_mat3x3.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_mat3x3.hpp; path = glm/detail/type_mat3x3.hpp; sourceTree = "<group>"; };
+		18ACFD1940B3EC7D695961E8147D6FEB /* common.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = common.hpp; path = glm/gtx/common.hpp; sourceTree = "<group>"; };
+		18BE37F218693A0178B382C48F1E1EDB /* vector_angle.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = vector_angle.hpp; path = glm/gtx/vector_angle.hpp; sourceTree = "<group>"; };
+		18D6FCE413BE443C7733D5BB689950B5 /* wrap.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = wrap.hpp; path = glm/gtx/wrap.hpp; sourceTree = "<group>"; };
+		19164CD1B6063E17144827DB791138BB /* matrix_query.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix_query.hpp; path = glm/gtx/matrix_query.hpp; sourceTree = "<group>"; };
+		1BA84E843F44C8F71CE7D6F836CF7B3D /* func_vector_relational.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = func_vector_relational.hpp; path = glm/detail/func_vector_relational.hpp; sourceTree = "<group>"; };
+		1C729C0FF8CACED0D28BEB5D5F0F1CC5 /* GrayscaleVideoFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrayscaleVideoFilter.h; path = filters/Basic/GrayscaleVideoFilter.h; sourceTree = "<group>"; };
+		1DA24E7E7F7D824DB35FD50E92AE166B /* closest_point.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = closest_point.hpp; path = glm/gtx/closest_point.hpp; sourceTree = "<group>"; };
+		1E4C06890B812B3F2C9D7ADBF04E7A2D /* _fixes.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = _fixes.hpp; path = glm/detail/_fixes.hpp; sourceTree = "<group>"; };
+		1FAA3383FAC725E4DB6329AEFEBA39E0 /* AudioMixer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AudioMixer.cpp; path = mixers/Apple/AudioMixer.cpp; sourceTree = "<group>"; };
+		1FC254D83A170EF71DFBC050779D7151 /* vec2.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = vec2.hpp; path = glm/vec2.hpp; sourceTree = "<group>"; };
+		1FC41CD44A69BE01F3AC40EECC1EC25B /* vec3.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = vec3.hpp; path = glm/vec3.hpp; sourceTree = "<group>"; };
+		20144EF62724F44C2E84E3FD0ACD9400 /* perpendicular.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = perpendicular.hpp; path = glm/gtx/perpendicular.hpp; sourceTree = "<group>"; };
+		224B6065478FF88115589EC8080D3B61 /* gradient_paint.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = gradient_paint.hpp; path = glm/gtx/gradient_paint.hpp; sourceTree = "<group>"; };
+		224F89465D03973A1668C111C4832699 /* normalize_dot.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = normalize_dot.hpp; path = glm/gtx/normalize_dot.hpp; sourceTree = "<group>"; };
+		23C7A69DF619AFE6C423B7A2FBAF036D /* TCPThroughputAdaptation.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = TCPThroughputAdaptation.cpp; path = stream/TCPThroughputAdaptation.cpp; sourceTree = "<group>"; };
+		2407B9068A438D62804015E85F41F281 /* type_int.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_int.hpp; path = glm/detail/type_int.hpp; sourceTree = "<group>"; };
+		242C1B82A618DE206D8B61419C6F22A1 /* matrix_major_storage.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix_major_storage.hpp; path = glm/gtx/matrix_major_storage.hpp; sourceTree = "<group>"; };
+		24D94E9E9CB01182436744868117334E /* BasicVideoFilterBGRAinYUVAout.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BasicVideoFilterBGRAinYUVAout.cpp; path = filters/Basic/BasicVideoFilterBGRAinYUVAout.cpp; sourceTree = "<group>"; };
+		25EAE6749BFF01CB8C8BBEA995869357 /* glm.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = glm.hpp; path = glm/glm.hpp; sourceTree = "<group>"; };
+		262E502870FFFBCC2AA4DB4A3C6C7797 /* intrinsic_trigonometric.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = intrinsic_trigonometric.hpp; path = glm/detail/intrinsic_trigonometric.hpp; sourceTree = "<group>"; };
+		26FECA32293E87B298519B2409007CE1 /* integer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = integer.hpp; path = glm/gtx/integer.hpp; sourceTree = "<group>"; };
+		29AA6383867FD4C658551E4D3F515ACF /* FisheyeVideoFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FisheyeVideoFilter.h; path = filters/Basic/FisheyeVideoFilter.h; sourceTree = "<group>"; };
+		2B63F9B6DD75FD9B07B5E937DF9FF3ED /* component_wise.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = component_wise.hpp; path = glm/gtx/component_wise.hpp; sourceTree = "<group>"; };
+		2D7541ED8117D72918C8510D5B500B2F /* MicSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MicSource.h; path = sources/iOS/MicSource.h; sourceTree = "<group>"; };
+		2F3E71A908697DC2EE7EE9A7CB470CD3 /* StreamSession.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = StreamSession.mm; path = stream/Apple/StreamSession.mm; sourceTree = "<group>"; };
+		314FE6BF7AC3097FA9D807B833BBAAE5 /* AudioMixer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AudioMixer.h; path = mixers/Apple/AudioMixer.h; sourceTree = "<group>"; };
+		321A82FB288B604B2269F3406054CDBB /* func_matrix.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = func_matrix.hpp; path = glm/detail/func_matrix.hpp; sourceTree = "<group>"; };
+		3412A68AD8081DB07B0925FEF703D147 /* StreamSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StreamSession.h; path = stream/Apple/StreamSession.h; sourceTree = "<group>"; };
+		34425BB8AE4D8CA145EC8238294E4BDF /* MP4Multiplexer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MP4Multiplexer.h; path = transforms/Apple/MP4Multiplexer.h; sourceTree = "<group>"; };
+		3526AC7E7428AF12B60AB3F19094F839 /* trigonometric.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = trigonometric.hpp; path = glm/trigonometric.hpp; sourceTree = "<group>"; };
+		360671B98C8087DBCFFAD4E0D2ABDD13 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		37066B05776FDFC0EBCB03838418F346 /* packing.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = packing.hpp; path = glm/gtc/packing.hpp; sourceTree = "<group>"; };
+		370699770F7B3C66195174C951C197EA /* Split.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Split.h; path = transforms/Split.h; sourceTree = "<group>"; };
+		3819A4ED3B1B7A1CDF1716C1130586C8 /* spline.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = spline.hpp; path = glm/gtx/spline.hpp; sourceTree = "<group>"; };
+		389F8C1697BBCD4D73578A2E7484EC6D /* ext.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ext.hpp; path = glm/ext.hpp; sourceTree = "<group>"; };
+		38C17182EC71AEA217EB26826B3C0916 /* IVideoMixer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = IVideoMixer.hpp; path = mixers/IVideoMixer.hpp; sourceTree = "<group>"; };
+		38DC37E5D88CA1E9A4135766EAC09EA8 /* intrinsic_integer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = intrinsic_integer.hpp; path = glm/detail/intrinsic_integer.hpp; sourceTree = "<group>"; };
+		39455A273AE6AB3D5150F573058A7F65 /* MP4Multiplexer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MP4Multiplexer.mm; path = transforms/Apple/MP4Multiplexer.mm; sourceTree = "<group>"; };
+		3A370DB60B9342D40B17E194E5DAC119 /* mat3x3.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mat3x3.hpp; path = glm/mat3x3.hpp; sourceTree = "<group>"; };
+		3C1F0B8D3BC279ADA79A16B3C25444DB /* mat2x2.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mat2x2.hpp; path = glm/mat2x2.hpp; sourceTree = "<group>"; };
+		3CC8E3786D62BF03C421B16F4CD78D97 /* hash.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = hash.hpp; path = glm/gtx/hash.hpp; sourceTree = "<group>"; };
+		3DA1EBB72E8BB5CE6DF2FAD08E165DFC /* FisheyeVideoFilter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = FisheyeVideoFilter.cpp; path = filters/Basic/FisheyeVideoFilter.cpp; sourceTree = "<group>"; };
+		40560827990FF4C8251D07727234B41B /* type_precision.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_precision.hpp; path = glm/gtc/type_precision.hpp; sourceTree = "<group>"; };
+		411CF1D44F64F3A93456CC7642FD6CB2 /* type_vec2.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_vec2.hpp; path = glm/detail/type_vec2.hpp; sourceTree = "<group>"; };
+		413C1A5DF5646E4334F70ED47F169D29 /* optimum_pow.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = optimum_pow.hpp; path = glm/gtx/optimum_pow.hpp; sourceTree = "<group>"; };
+		45932AA01F489A9ADF89C5AC62F3E436 /* Golomb.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Golomb.cpp; path = system/h264/Golomb.cpp; sourceTree = "<group>"; };
+		45C02CCA662CE98B72662DFAB5D15656 /* extented_min_max.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = extented_min_max.hpp; path = glm/gtx/extented_min_max.hpp; sourceTree = "<group>"; };
+		45D37A6DC62F2AE0C251BD7B5E14FF0E /* type_mat2x2.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_mat2x2.hpp; path = glm/detail/type_mat2x2.hpp; sourceTree = "<group>"; };
+		488A34309A55CCD8671B444A7169E48E /* fast_exponential.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = fast_exponential.hpp; path = glm/gtx/fast_exponential.hpp; sourceTree = "<group>"; };
+		48F11309FD2B3B6FA8EA6264A0140A2D /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		49909F494B65B54C7E78A9003FFDBF15 /* UriCodec.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = UriCodec.cpp; sourceTree = "<group>"; };
+		4B89D0D3F58F850C53300831E9FE4BA1 /* vec4.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = vec4.hpp; path = glm/vec4.hpp; sourceTree = "<group>"; };
+		4CC0348328B7A4A56A8362F005EA8374 /* util.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = util.h; path = system/util.h; sourceTree = "<group>"; };
+		4F3F0F222CCB3945D7E38F49B8909E9F /* raw_data.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = raw_data.hpp; path = glm/gtx/raw_data.hpp; sourceTree = "<group>"; };
+		4F7E1F30B0BB66C2B99B941813D0D2DA /* projection.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = projection.hpp; path = glm/gtx/projection.hpp; sourceTree = "<group>"; };
+		517588ED1AE6ED7A8250712058448CF5 /* mat4x3.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mat4x3.hpp; path = glm/mat4x3.hpp; sourceTree = "<group>"; };
+		5267A77E7898FA451354E4B613526797 /* VideoCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VideoCore-dummy.m"; sourceTree = "<group>"; };
+		527B8B595BE8D2650B0CB313557678C3 /* scalar_multiplication.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = scalar_multiplication.hpp; path = glm/gtx/scalar_multiplication.hpp; sourceTree = "<group>"; };
+		535B97270163768302371409627E1D5C /* BasicVideoFilterBGRA.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BasicVideoFilterBGRA.cpp; path = filters/Basic/BasicVideoFilterBGRA.cpp; sourceTree = "<group>"; };
+		55A480D05567233FA3E0DD03A3B586C3 /* VCPreviewView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VCPreviewView.h; path = api/iOS/VCPreviewView.h; sourceTree = "<group>"; };
+		55FB9F909382DC77F43DA3AB76FBA6DD /* matrix_decompose.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix_decompose.hpp; path = glm/gtx/matrix_decompose.hpp; sourceTree = "<group>"; };
+		561F5E9E13BC2A15DDD785FBB2766209 /* PositionTransform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PositionTransform.h; path = transforms/PositionTransform.h; sourceTree = "<group>"; };
+		5674F3F5BC916C5B5D82DBBBC38FF69F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		594EEE6104190AA2A1BC3EA45CBD791D /* AspectTransform.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AspectTransform.cpp; path = transforms/AspectTransform.cpp; sourceTree = "<group>"; };
+		5B88FABE233137E8DB05413D26309792 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		5C962636EB84D54AE3F4C41CB612CD31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5CBEFA0E96502DEC41ADDDF46B7C0CC7 /* H264Packetizer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = H264Packetizer.cpp; path = transforms/RTMP/H264Packetizer.cpp; sourceTree = "<group>"; };
+		5E64C67DB091E07232742F9F0BDAB90B /* constants.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = constants.hpp; path = glm/gtc/constants.hpp; sourceTree = "<group>"; };
+		5E6E3D82BF6D92D1C1A07FC9CF5C8552 /* mat3x4.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mat3x4.hpp; path = glm/mat3x4.hpp; sourceTree = "<group>"; };
+		5FA6E49A3041095FF797865D948F43BE /* quaternion.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = quaternion.hpp; path = glm/gtc/quaternion.hpp; sourceTree = "<group>"; };
+		5FDFE739C3CC59437AB62331F929A39A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		6155D9DDFB82CF7EE2BC375E397DB22D /* ulp.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ulp.hpp; path = glm/gtc/ulp.hpp; sourceTree = "<group>"; };
+		62F8AF8AC4046910DA5999B08B68913D /* _vectorize.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = _vectorize.hpp; path = glm/detail/_vectorize.hpp; sourceTree = "<group>"; };
+		63960FD4CC9AC601144E72D1954DEC45 /* type_ptr.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_ptr.hpp; path = glm/gtc/type_ptr.hpp; sourceTree = "<group>"; };
+		64FAB47E49E14611CF65786248D36D9E /* matrix.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix.hpp; path = glm/matrix.hpp; sourceTree = "<group>"; };
+		6565C82D4E3F3DECBE2E9EA002074618 /* H264Encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = H264Encode.h; path = transforms/Apple/H264Encode.h; sourceTree = "<group>"; };
+		66251FA61A6F43B7D04A05078E12A5F6 /* type_mat2x3.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_mat2x3.hpp; path = glm/detail/type_mat2x3.hpp; sourceTree = "<group>"; };
+		66EA1CECBEFBE2E12CE4A92510C69671 /* RTMPSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTMPSession.h; path = rtmp/RTMPSession.h; sourceTree = "<group>"; };
+		67937FF3EC858EFF8D47868BF357DBB8 /* dual_quaternion.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = dual_quaternion.hpp; path = glm/gtx/dual_quaternion.hpp; sourceTree = "<group>"; };
+		6A13C7AB5B40EE3A6E9AF70A7BB3DD0E /* mat2x3.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mat2x3.hpp; path = glm/mat2x3.hpp; sourceTree = "<group>"; };
+		6CD1FD8217CC3FF7A822407937B29CE6 /* transform2.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = transform2.hpp; path = glm/gtx/transform2.hpp; sourceTree = "<group>"; };
+		6E2F71B6DAAEA566821896A3A2945CAE /* PixelBuffer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = PixelBuffer.cpp; path = system/pixelBuffer/Apple/PixelBuffer.cpp; sourceTree = "<group>"; };
+		7015A903DD8CF8AF31CB332788914DE2 /* color_space.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = color_space.hpp; path = glm/gtx/color_space.hpp; sourceTree = "<group>"; };
+		702836CB59E5F9E281C07305F63D2DB7 /* polar_coordinates.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = polar_coordinates.hpp; path = glm/gtx/polar_coordinates.hpp; sourceTree = "<group>"; };
+		712889FA84A84FAC53B2F4412E36FECE /* rotate_normalized_axis.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rotate_normalized_axis.hpp; path = glm/gtx/rotate_normalized_axis.hpp; sourceTree = "<group>"; };
+		72F3E49C2DB21BADF4B95F3B7FEC105E /* normal.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = normal.hpp; path = glm/gtx/normal.hpp; sourceTree = "<group>"; };
+		73005779F87B7CB4E814B45A4C126E4E /* CameraSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CameraSource.mm; path = sources/iOS/CameraSource.mm; sourceTree = "<group>"; };
+		733FBFCCB6DAA3556FBB3961536FA902 /* AACEncode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AACEncode.h; path = transforms/iOS/AACEncode.h; sourceTree = "<group>"; };
+		73884C957B5DEF86352D9F47B79CF21D /* _swizzle.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = _swizzle.hpp; path = glm/detail/_swizzle.hpp; sourceTree = "<group>"; };
+		74C4D838964F5F570D6F4EA6A6D067D3 /* type_mat3x2.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_mat3x2.hpp; path = glm/detail/type_mat3x2.hpp; sourceTree = "<group>"; };
+		74E455615EC74CAEAD6F259E7454A16B /* UriParser-cpp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UriParser-cpp-dummy.m"; sourceTree = "<group>"; };
+		75106AE62E97BFACC5DBC95749FA54CB /* PixelBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PixelBuffer.h; path = system/pixelBuffer/Apple/PixelBuffer.h; sourceTree = "<group>"; };
+		762F296089060CF85B6D0191541F52C4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		7729B66A2C98030C1683290FF6FA941D /* VCPreviewView.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = VCPreviewView.mm; path = api/iOS/VCPreviewView.mm; sourceTree = "<group>"; };
+		7752DA384A7C6DD0211CEB2D9208BBC0 /* bitfield.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = bitfield.hpp; path = glm/gtc/bitfield.hpp; sourceTree = "<group>"; };
+		77FEAEE0ABD3DA55B53C2CD50D94F4F9 /* type_mat4x3.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_mat4x3.hpp; path = glm/detail/type_mat4x3.hpp; sourceTree = "<group>"; };
+		786FB5A41390B5E950908D6A77B6C6E6 /* ISource.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ISource.hpp; path = sources/ISource.hpp; sourceTree = "<group>"; };
+		78D9FF24D82701AA441BB56EA632A51E /* std_based_type.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = std_based_type.hpp; path = glm/gtx/std_based_type.hpp; sourceTree = "<group>"; };
+		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		7B125D6B992D46E915D91ACA69A6D4B6 /* _swizzle_func.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = _swizzle_func.hpp; path = glm/detail/_swizzle_func.hpp; sourceTree = "<group>"; };
+		7D24E63E9746DF729D2FCD1FABA8C559 /* Buffer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = Buffer.hpp; path = system/Buffer.hpp; sourceTree = "<group>"; };
+		7E35AF6AA30A662D70F1B8C649DD09F7 /* IAudioMixer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = IAudioMixer.hpp; path = mixers/IAudioMixer.hpp; sourceTree = "<group>"; };
+		7F7C6C54BBD2700E64377369205EAFE8 /* type_vec3.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_vec3.hpp; path = glm/detail/type_vec3.hpp; sourceTree = "<group>"; };
+		80CC71BE461C557376544E723EDEB2AD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		836BAE34CF8136D8F29E15616AE0A43F /* vector_query.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = vector_query.hpp; path = glm/gtx/vector_query.hpp; sourceTree = "<group>"; };
+		83BEAD31CBAA8F82F8985BE11F7F1DE6 /* matrix_access.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix_access.hpp; path = glm/gtc/matrix_access.hpp; sourceTree = "<group>"; };
+		83DD13B97FFFB41FC38DB32B1AEBB22A /* type_mat.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_mat.hpp; path = glm/detail/type_mat.hpp; sourceTree = "<group>"; };
+		84955D5AC207F63863AA57FF874E2BCC /* GenericPixelBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GenericPixelBuffer.h; path = system/pixelBuffer/GenericPixelBuffer.h; sourceTree = "<group>"; };
+		8499EFD2FEEA39B5C61522B2645A4284 /* IVideoFilter.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = IVideoFilter.hpp; path = filters/IVideoFilter.hpp; sourceTree = "<group>"; };
+		84ABA6ED2E6F05B2C6A347EE4EA426F3 /* IThroughputAdaptation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IThroughputAdaptation.h; path = stream/IThroughputAdaptation.h; sourceTree = "<group>"; };
+		851336D8F21110554C4F7AA6DCDE0650 /* PositionTransform.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = PositionTransform.cpp; path = transforms/PositionTransform.cpp; sourceTree = "<group>"; };
+		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		881474634220A7AE20B7CCF36F1F8B31 /* type_vec1.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_vec1.hpp; path = glm/detail/type_vec1.hpp; sourceTree = "<group>"; };
+		88B68A48950845682B75D3E75696DE2C /* _noise.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = _noise.hpp; path = glm/detail/_noise.hpp; sourceTree = "<group>"; };
+		890D3EFB6AD02DB624473A849A30DEC7 /* InvertColorsVideoFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InvertColorsVideoFilter.h; path = filters/Basic/InvertColorsVideoFilter.h; sourceTree = "<group>"; };
+		8D154CCA633E4FDF135C1B067BA634D3 /* AACEncode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AACEncode.cpp; path = transforms/iOS/AACEncode.cpp; sourceTree = "<group>"; };
+		8F8590DCBB0CE036B339FC938A349A68 /* fast_square_root.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = fast_square_root.hpp; path = glm/gtx/fast_square_root.hpp; sourceTree = "<group>"; };
+		8F9E98DA1CAAC33473412CBEF65C5007 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/VideoToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		903E73D2188E5BD62A7F3B1A42DA94CC /* epsilon.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = epsilon.hpp; path = glm/gtc/epsilon.hpp; sourceTree = "<group>"; };
+		9070EDF714AF5B77B9A2DE7F01B20A59 /* vec1.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = vec1.hpp; path = glm/gtc/vec1.hpp; sourceTree = "<group>"; };
+		91DF8BCA7A32913F5ACB6B40296F5A1D /* mat4x4.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mat4x4.hpp; path = glm/mat4x4.hpp; sourceTree = "<group>"; };
+		926765E4C0F644028F17FD4F5EE89BA7 /* bit.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = bit.hpp; path = glm/gtx/bit.hpp; sourceTree = "<group>"; };
+		940E1FB3A820811875E897D8F2DDA500 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94C57D6705C9EFCC11132B471A0C637C /* type_gentype.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_gentype.hpp; path = glm/detail/type_gentype.hpp; sourceTree = "<group>"; };
+		9503FF4BC7E1D9DE110ECEDD85CD236E /* type_half.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_half.hpp; path = glm/detail/type_half.hpp; sourceTree = "<group>"; };
+		96D625905E21C01A044DE28A28EF0D3E /* GlowVideoFilter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GlowVideoFilter.cpp; path = filters/Basic/GlowVideoFilter.cpp; sourceTree = "<group>"; };
+		978F7573B9BF0DBB27651001D8C05550 /* type_mat4x2.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_mat4x2.hpp; path = glm/detail/type_mat4x2.hpp; sourceTree = "<group>"; };
+		97B80BE752AD95B5BFC3F6AC1E884B72 /* UriParser-cpp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UriParser-cpp-umbrella.h"; sourceTree = "<group>"; };
+		9845EC44D67F81E9A47AB24B3538B6C2 /* matrix_cross_product.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix_cross_product.hpp; path = glm/gtx/matrix_cross_product.hpp; sourceTree = "<group>"; };
+		98FC010F3CFB6B380E32B59F6AB229A9 /* norm.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = norm.hpp; path = glm/gtx/norm.hpp; sourceTree = "<group>"; };
+		990FE94B6118C65669777B3CA3730237 /* GLESVideoMixer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GLESVideoMixer.h; path = mixers/iOS/GLESVideoMixer.h; sourceTree = "<group>"; };
+		9B11257115349682F2C1B81086EB14E5 /* IStreamSession.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = IStreamSession.hpp; path = stream/IStreamSession.hpp; sourceTree = "<group>"; };
+		9B2CBE86BA3F1138C209CDE4BB9C8AC7 /* orthonormalize.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = orthonormalize.hpp; path = glm/gtx/orthonormalize.hpp; sourceTree = "<group>"; };
+		9B4ADEA027A29388FC812B5B134DCDD6 /* PixelBufferSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = PixelBufferSource.mm; path = sources/Apple/PixelBufferSource.mm; sourceTree = "<group>"; };
+		9CDC733DEC62842D8D170165F368EB57 /* log_base.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = log_base.hpp; path = glm/gtx/log_base.hpp; sourceTree = "<group>"; };
+		9DFEF3E525AA996B998DE526827EE925 /* range.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = range.hpp; path = glm/gtx/range.hpp; sourceTree = "<group>"; };
+		9F1737CE973C56DC32C712B4368E218C /* associated_min_max.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = associated_min_max.hpp; path = glm/gtx/associated_min_max.hpp; sourceTree = "<group>"; };
+		9FE567090F9CC6C4E9BE09083C73D616 /* ITransform.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ITransform.hpp; path = transforms/ITransform.hpp; sourceTree = "<group>"; };
+		A03F48489B1B6CC622434959318C56B8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		A564C3321569CD6904B60BEEF8C82EB3 /* transform.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = transform.hpp; path = glm/gtx/transform.hpp; sourceTree = "<group>"; };
+		A6005B24BFDD09121AACC50E9A6F1D84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		A7996E02D57AB47942FBB7FF00D28A59 /* packing.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = packing.hpp; path = glm/packing.hpp; sourceTree = "<group>"; };
+		A83A79A81D80AA8398D6EBE0E52C084F /* func_exponential.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = func_exponential.hpp; path = glm/detail/func_exponential.hpp; sourceTree = "<group>"; };
+		A8C88C5AB7DC8A6D548B7AB1A9E7808B /* VCSimpleSession.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = VCSimpleSession.mm; path = api/iOS/VCSimpleSession.mm; sourceTree = "<group>"; };
+		A91F4B388914CCE4D5A0B8382DD34981 /* IMetaData.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = IMetaData.hpp; path = transforms/IMetaData.hpp; sourceTree = "<group>"; };
+		A9935E39BB78294B3A419EE83569F474 /* intersect.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = intersect.hpp; path = glm/gtx/intersect.hpp; sourceTree = "<group>"; };
+		A99413BB5CAA9AC1649015C8B94B9B44 /* GenericAudioMixer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GenericAudioMixer.cpp; path = mixers/GenericAudioMixer.cpp; sourceTree = "<group>"; };
+		A9ABEEE025C321E18E1CC9DE4E1BFD73 /* compatibility.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = compatibility.hpp; path = glm/gtx/compatibility.hpp; sourceTree = "<group>"; };
+		AA321280D58E859FEE299FCEFFF21089 /* GenericAudioMixer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GenericAudioMixer.h; path = mixers/GenericAudioMixer.h; sourceTree = "<group>"; };
+		AB76B966C58B3AE3CA622F3D81EF1929 /* VideoCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VideoCore.modulemap; sourceTree = "<group>"; };
+		AB9430C937D8032735F389691FFEB4F9 /* matrix_inverse.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix_inverse.hpp; path = glm/gtc/matrix_inverse.hpp; sourceTree = "<group>"; };
+		ABA8DE78218A1CFBA606F6D385961D40 /* intrinsic_exponential.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = intrinsic_exponential.hpp; path = glm/detail/intrinsic_exponential.hpp; sourceTree = "<group>"; };
+		ABD90C084D432672743413D2A872B079 /* mat4x2.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mat4x2.hpp; path = glm/mat4x2.hpp; sourceTree = "<group>"; };
+		ACFB1078D4FBE34E2A9818A2F6F75005 /* func_trigonometric.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = func_trigonometric.hpp; path = glm/detail/func_trigonometric.hpp; sourceTree = "<group>"; };
+		AD7CF3EB356221726A6D76CFA5D99EE6 /* H264Encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = H264Encode.h; path = transforms/iOS/H264Encode.h; sourceTree = "<group>"; };
+		AEF98F26E84F829E5FB6AD41CB3D4C46 /* IOutput.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = IOutput.hpp; path = transforms/IOutput.hpp; sourceTree = "<group>"; };
+		AF500091097D57A43250D5C587B0F6E5 /* type_mat2x4.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_mat2x4.hpp; path = glm/detail/type_mat2x4.hpp; sourceTree = "<group>"; };
+		AF74CC0BB084AEED8FCEFEB61F6F5330 /* integer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = integer.hpp; path = glm/integer.hpp; sourceTree = "<group>"; };
+		B23CEC1D10094352D00B374076A0EB9B /* type_vec.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_vec.hpp; path = glm/detail/type_vec.hpp; sourceTree = "<group>"; };
+		B244CD3B08186D9DB9F11671A2F4DDE1 /* exponential.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = exponential.hpp; path = glm/exponential.hpp; sourceTree = "<group>"; };
+		B4BC67E5CA869437F7E8BF9470F91C9F /* string_cast.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = string_cast.hpp; path = glm/gtx/string_cast.hpp; sourceTree = "<group>"; };
+		B6EF2AC78681C71871B4F7276AF6896B /* UriParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UriParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B737E40689FB4DB12778E1AFD9EFA70E /* mat3x2.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mat3x2.hpp; path = glm/mat3x2.hpp; sourceTree = "<group>"; };
+		B8086FF5284FCBE10C1F67D1924B6301 /* precision.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = precision.hpp; path = glm/detail/precision.hpp; sourceTree = "<group>"; };
+		B9417FDD46CF274654FC77439DBF6EB3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		BA37E67BA91395AED6089F84A0BEEC66 /* random.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = random.hpp; path = glm/gtc/random.hpp; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BBD2D423544F4914B68B4D0F0207EFE2 /* func_integer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = func_integer.hpp; path = glm/detail/func_integer.hpp; sourceTree = "<group>"; };
+		BDF3BAB261259D56109CAFD5F53D6875 /* UriParser-cpp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "UriParser-cpp.modulemap"; sourceTree = "<group>"; };
+		BF061E1A2C0AF4AAA34649A2E8A6128C /* func_geometric.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = func_geometric.hpp; path = glm/detail/func_geometric.hpp; sourceTree = "<group>"; };
+		C0DC6359791A93A02F8DE97E76543EC4 /* TCPThroughputAdaptation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TCPThroughputAdaptation.h; path = stream/TCPThroughputAdaptation.h; sourceTree = "<group>"; };
+		C464A98A7B400A0C5939EDDD05BCB468 /* SepiaVideoFilter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = SepiaVideoFilter.cpp; path = filters/Basic/SepiaVideoFilter.cpp; sourceTree = "<group>"; };
+		C4DDF957501F4289A294CD722C5EDBE2 /* func_packing.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = func_packing.hpp; path = glm/detail/func_packing.hpp; sourceTree = "<group>"; };
+		C5F41091B5B79F16A5DBE9F167970B81 /* matrix_transform.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix_transform.hpp; path = glm/gtc/matrix_transform.hpp; sourceTree = "<group>"; };
+		C79840669DC89C3CF316FEA1C8BDCCEF /* AACPacketizer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AACPacketizer.cpp; path = transforms/RTMP/AACPacketizer.cpp; sourceTree = "<group>"; };
+		CB2CE9228B353D45F1A607F448234DFB /* GLESVideoMixer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GLESVideoMixer.mm; path = mixers/iOS/GLESVideoMixer.mm; sourceTree = "<group>"; };
+		CB9EC134A2D4B352458B6C6BE975AB25 /* BasicVideoFilterBGRAinYUVAout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicVideoFilterBGRAinYUVAout.h; path = filters/Basic/BasicVideoFilterBGRAinYUVAout.h; sourceTree = "<group>"; };
+		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		CC67662CFE9E336AC0430F3FEECDC040 /* RTMPTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTMPTypes.h; path = rtmp/RTMPTypes.h; sourceTree = "<group>"; };
+		CDBE6626C6968FE40EE71140066F7E04 /* matrix_interpolation.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix_interpolation.hpp; path = glm/gtx/matrix_interpolation.hpp; sourceTree = "<group>"; };
+		CDD2F800EB0F2F03D8260F6C4D366138 /* reciprocal.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = reciprocal.hpp; path = glm/gtc/reciprocal.hpp; sourceTree = "<group>"; };
+		CDF1BD14504E7844B3AB7530C7AEC0F5 /* IPixelBuffer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = IPixelBuffer.hpp; path = system/pixelBuffer/IPixelBuffer.hpp; sourceTree = "<group>"; };
+		CE77C39DCF12C2674458F27A62C2A70E /* setup.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = setup.hpp; path = glm/detail/setup.hpp; sourceTree = "<group>"; };
+		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D04D5901EED07D792AD5E1E130038A23 /* type_float.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_float.hpp; path = glm/detail/type_float.hpp; sourceTree = "<group>"; };
+		D1FAC8A916E1F1DC32090DEFE814A4EE /* UriParser-cpp-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UriParser-cpp-prefix.pch"; sourceTree = "<group>"; };
+		D2A43B458E65C95A5112C7218E46C0BE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9146978780012572EB3B1A9D61B068E /* VideoCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VideoCore.xcconfig; sourceTree = "<group>"; };
+		D91E58764E7F06E9C2054C2DD82858EC /* AACPacketizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AACPacketizer.h; path = transforms/RTMP/AACPacketizer.h; sourceTree = "<group>"; };
+		DA212ADE7A059BE333E2828F6D9C320E /* type_vec4.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_vec4.hpp; path = glm/detail/type_vec4.hpp; sourceTree = "<group>"; };
+		DACB38FFCF83626D53AC211ACA484827 /* FilterFactory.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = FilterFactory.cpp; path = filters/FilterFactory.cpp; sourceTree = "<group>"; };
+		DB824491DF1243B679B050586C5E9BE8 /* simd_quat.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = simd_quat.hpp; path = glm/gtx/simd_quat.hpp; sourceTree = "<group>"; };
+		DB8A8C04D2155A9BD207B70AAA065014 /* JobQueue.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = JobQueue.hpp; path = system/JobQueue.hpp; sourceTree = "<group>"; };
+		DE66B975FB0FBBA05BD3F153D1416A9D /* integer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = integer.hpp; path = glm/gtc/integer.hpp; sourceTree = "<group>"; };
+		DFA42F07762187753D2FDE91F2C9011C /* extend.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = extend.hpp; path = glm/gtx/extend.hpp; sourceTree = "<group>"; };
+		E11A50C0765A51465B893268618A03EA /* H264Encode.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = H264Encode.mm; path = transforms/Apple/H264Encode.mm; sourceTree = "<group>"; };
+		E1392B4B1426AB4BA0B7AC7F405447B9 /* VideoCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VideoCore-umbrella.h"; sourceTree = "<group>"; };
+		E1603C230F78153BDFF71D75DBC7D1FB /* rotate_vector.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rotate_vector.hpp; path = glm/gtx/rotate_vector.hpp; sourceTree = "<group>"; };
+		E1C21D627CB6527B84525EFE5AEEE942 /* GlowVideoFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GlowVideoFilter.h; path = filters/Basic/GlowVideoFilter.h; sourceTree = "<group>"; };
+		E23DB693D2349DCAE90424F8F5230AC6 /* vector_relational.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = vector_relational.hpp; path = glm/vector_relational.hpp; sourceTree = "<group>"; };
+		E2844F893CC7A948424970D3207A0F92 /* quaternion.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = quaternion.hpp; path = glm/gtx/quaternion.hpp; sourceTree = "<group>"; };
+		E285D1B243E6DC76597F931481B145EE /* scalar_relational.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = scalar_relational.hpp; path = glm/gtx/scalar_relational.hpp; sourceTree = "<group>"; };
+		E35C2E6307A4F064EAF099A06D75F956 /* H264Encode.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = H264Encode.mm; path = transforms/iOS/H264Encode.mm; sourceTree = "<group>"; };
+		E4331D7B1065B3F8E480D54F41232BE1 /* AspectTransform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AspectTransform.h; path = transforms/AspectTransform.h; sourceTree = "<group>"; };
+		E5C910FC31FA0753FA031C6C75FB3B78 /* intrinsic_vector_relational.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = intrinsic_vector_relational.hpp; path = glm/detail/intrinsic_vector_relational.hpp; sourceTree = "<group>"; };
+		E72794F8817968F46E27097569DFB226 /* _features.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = _features.hpp; path = glm/detail/_features.hpp; sourceTree = "<group>"; };
+		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9234485E0B170B7DE409A5F156B50D3 /* type_mat4x4.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_mat4x4.hpp; path = glm/detail/type_mat4x4.hpp; sourceTree = "<group>"; };
+		E9A394516A14E6BDDA43C836485BA201 /* IOutputSession.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = IOutputSession.hpp; path = transforms/IOutputSession.hpp; sourceTree = "<group>"; };
+		E9D6342CB7DBE10FC83739B618437C7E /* number_precision.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = number_precision.hpp; path = glm/gtx/number_precision.hpp; sourceTree = "<group>"; };
+		EB7E25B799BC14E36A02DB540C6C2324 /* intrinsic_geometric.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = intrinsic_geometric.hpp; path = glm/detail/intrinsic_geometric.hpp; sourceTree = "<group>"; };
+		EC0A00863806AF8D5B4989649B911A95 /* intrinsic_common.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = intrinsic_common.hpp; path = glm/detail/intrinsic_common.hpp; sourceTree = "<group>"; };
+		ED405C292577A2C8CC8C086B121CCDBD /* mixed_product.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mixed_product.hpp; path = glm/gtx/mixed_product.hpp; sourceTree = "<group>"; };
+		ED9F28D39903DEDE57A0F14AE1125546 /* euler_angles.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = euler_angles.hpp; path = glm/gtx/euler_angles.hpp; sourceTree = "<group>"; };
+		EE2257AB7066055055F8AE329B9475F0 /* type_aligned.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_aligned.hpp; path = glm/gtx/type_aligned.hpp; sourceTree = "<group>"; };
+		F021A9FA0F7EA48C428A2146A33B434B /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		F02F164CA21AEF2C243EF6A4F3006307 /* videocore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = videocore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2382D7E80AE20BECD05E3F76B8756C6 /* Golomb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Golomb.h; path = system/h264/Golomb.h; sourceTree = "<group>"; };
+		F24BB0ED966C135D43008C465B1A2DCD /* matrix_operation.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix_operation.hpp; path = glm/gtx/matrix_operation.hpp; sourceTree = "<group>"; };
+		F456230B56241395A894A4ED81F0ED83 /* color_space_YCoCg.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = color_space_YCoCg.hpp; path = glm/gtx/color_space_YCoCg.hpp; sourceTree = "<group>"; };
+		F537BE4267205500506FEE53E0795A6E /* mat2x4.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mat2x4.hpp; path = glm/mat2x4.hpp; sourceTree = "<group>"; };
+		F54450D0002A01A0D883F6B3BE5F8846 /* intrinsic_matrix.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = intrinsic_matrix.hpp; path = glm/detail/intrinsic_matrix.hpp; sourceTree = "<group>"; };
+		F79D9AE45B518EEAB7481AABC49D82D6 /* IEncoder.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = IEncoder.hpp; path = transforms/IEncoder.hpp; sourceTree = "<group>"; };
+		F9090C5B3401C13658A729D2E8E674B9 /* InvertColorsVideoFilter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = InvertColorsVideoFilter.cpp; path = filters/Basic/InvertColorsVideoFilter.cpp; sourceTree = "<group>"; };
+		FB115D6F13B6EC50FC7B4699D9768ED1 /* color_space.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = color_space.hpp; path = glm/gtc/color_space.hpp; sourceTree = "<group>"; };
+		FB298E11B2B177155FA0C61C079C3B3D /* geometric.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = geometric.hpp; path = glm/geometric.hpp; sourceTree = "<group>"; };
+		FBC98A92209C467355F1462DF8C0522B /* noise.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = noise.hpp; path = glm/gtc/noise.hpp; sourceTree = "<group>"; };
+		FBDDCD2706A1585538595FC73C5149D6 /* CameraSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CameraSource.h; path = sources/iOS/CameraSource.h; sourceTree = "<group>"; };
+		FDFC38BBCF8C44567203659282B8F414 /* GenericPixelBuffer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GenericPixelBuffer.cpp; path = system/pixelBuffer/GenericPixelBuffer.cpp; sourceTree = "<group>"; };
+		FE8A756F8F28042414B8ED722FE94C61 /* UriParser.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; path = UriParser.hpp; sourceTree = "<group>"; };
+		FEC932D19BCAC74FF892F5E690C8E983 /* type_mat3x4.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = type_mat3x4.hpp; path = glm/detail/type_mat3x4.hpp; sourceTree = "<group>"; };
+		FF56729848F4BC3647B913CA536D457A /* matrix_integer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = matrix_integer.hpp; path = glm/gtc/matrix_integer.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81E9AFF1D8147A661DEE7B50086B6F95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3682291B4672643A7FB4059B816EC37C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA7E8E0078712933E6675E5DE7AB3F1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9090FF53C060F78D6FD5B0C9BC8E2129 /* AudioToolbox.framework in Frameworks */,
+				FC63BDB1C011142A4DDAE8D8A0FF355F /* AVFoundation.framework in Frameworks */,
+				73A204BC2E940355F83F8E7563B1EDA7 /* CFNetwork.framework in Frameworks */,
+				9206C00BB24CF413DAB8B12597F76C62 /* CoreGraphics.framework in Frameworks */,
+				7B826241C64818F71010685241DA6521 /* CoreMedia.framework in Frameworks */,
+				A46EF5CABBB144E96E3AA60E6846E652 /* CoreVideo.framework in Frameworks */,
+				1B3CA7D9FC827A708AAE881FF683F2C8 /* Foundation.framework in Frameworks */,
+				792D357EC494CA76DD36370FDC3B3C5A /* OpenGLES.framework in Frameworks */,
+				D587851EF1B357CFFF4FB0DEA0CB738A /* UriParser.framework in Frameworks */,
+				D083A67C34B28A07B819790DA2B85DD1 /* VideoToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E23E519052D6B374B6B0BA0FA1243896 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF40B152D74FD2999632F5A6F307B91F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E438CBCFE231A032B01922FB080D9C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2A43B458E65C95A5112C7218E46C0BE /* Info.plist */,
+				AB76B966C58B3AE3CA622F3D81EF1929 /* VideoCore.modulemap */,
+				D9146978780012572EB3B1A9D61B068E /* VideoCore.xcconfig */,
+				5267A77E7898FA451354E4B613526797 /* VideoCore-dummy.m */,
+				162A02D0BB7E71E263E059E957B72A9D /* VideoCore-prefix.pch */,
+				E1392B4B1426AB4BA0B7AC7F405447B9 /* VideoCore-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VideoCore";
+			sourceTree = "<group>";
+		};
+		17462BC224D4482B7604A17C14C82AA8 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5674F3F5BC916C5B5D82DBBBC38FF69F /* AudioToolbox.framework */,
+				A03F48489B1B6CC622434959318C56B8 /* AVFoundation.framework */,
+				5B88FABE233137E8DB05413D26309792 /* CFNetwork.framework */,
+				A6005B24BFDD09121AACC50E9A6F1D84 /* CoreGraphics.framework */,
+				B9417FDD46CF274654FC77439DBF6EB3 /* CoreMedia.framework */,
+				5FDFE739C3CC59437AB62331F929A39A /* CoreVideo.framework */,
+				5C962636EB84D54AE3F4C41CB612CD31 /* Foundation.framework */,
+				762F296089060CF85B6D0191541F52C4 /* OpenGLES.framework */,
+				8F9E98DA1CAAC33473412CBEF65C5007 /* VideoToolbox.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1F6F2900810B8A274D8C80837DC35E52 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				940E1FB3A820811875E897D8F2DDA500 /* Info.plist */,
+				BDF3BAB261259D56109CAFD5F53D6875 /* UriParser-cpp.modulemap */,
+				0D4C7F1C01B3BCD8BC2DCF0FEC525229 /* UriParser-cpp.xcconfig */,
+				74E455615EC74CAEAD6F259E7454A16B /* UriParser-cpp-dummy.m */,
+				D1FAC8A916E1F1DC32090DEFE814A4EE /* UriParser-cpp-prefix.pch */,
+				97B80BE752AD95B5BFC3F6AC1E884B72 /* UriParser-cpp-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UriParser-cpp";
+			sourceTree = "<group>";
+		};
+		54407ED7C9D590E8E0CDBC12BF7AD5CE /* glm */ = {
+			isa = PBXGroup;
+			children = (
+				E72794F8817968F46E27097569DFB226 /* _features.hpp */,
+				1E4C06890B812B3F2C9D7ADBF04E7A2D /* _fixes.hpp */,
+				88B68A48950845682B75D3E75696DE2C /* _noise.hpp */,
+				73884C957B5DEF86352D9F47B79CF21D /* _swizzle.hpp */,
+				7B125D6B992D46E915D91ACA69A6D4B6 /* _swizzle_func.hpp */,
+				62F8AF8AC4046910DA5999B08B68913D /* _vectorize.hpp */,
+				9F1737CE973C56DC32C712B4368E218C /* associated_min_max.hpp */,
+				926765E4C0F644028F17FD4F5EE89BA7 /* bit.hpp */,
+				7752DA384A7C6DD0211CEB2D9208BBC0 /* bitfield.hpp */,
+				1DA24E7E7F7D824DB35FD50E92AE166B /* closest_point.hpp */,
+				7015A903DD8CF8AF31CB332788914DE2 /* color_space.hpp */,
+				FB115D6F13B6EC50FC7B4699D9768ED1 /* color_space.hpp */,
+				F456230B56241395A894A4ED81F0ED83 /* color_space_YCoCg.hpp */,
+				04858143B0102CFF8C9B417F7E38C25E /* common.hpp */,
+				18ACFD1940B3EC7D695961E8147D6FEB /* common.hpp */,
+				A9ABEEE025C321E18E1CC9DE4E1BFD73 /* compatibility.hpp */,
+				2B63F9B6DD75FD9B07B5E937DF9FF3ED /* component_wise.hpp */,
+				5E64C67DB091E07232742F9F0BDAB90B /* constants.hpp */,
+				67937FF3EC858EFF8D47868BF357DBB8 /* dual_quaternion.hpp */,
+				903E73D2188E5BD62A7F3B1A42DA94CC /* epsilon.hpp */,
+				ED9F28D39903DEDE57A0F14AE1125546 /* euler_angles.hpp */,
+				B244CD3B08186D9DB9F11671A2F4DDE1 /* exponential.hpp */,
+				389F8C1697BBCD4D73578A2E7484EC6D /* ext.hpp */,
+				DFA42F07762187753D2FDE91F2C9011C /* extend.hpp */,
+				45C02CCA662CE98B72662DFAB5D15656 /* extented_min_max.hpp */,
+				488A34309A55CCD8671B444A7169E48E /* fast_exponential.hpp */,
+				8F8590DCBB0CE036B339FC938A349A68 /* fast_square_root.hpp */,
+				0B3F6A6DA6098AEA137F15D9A9FDD53A /* fast_trigonometry.hpp */,
+				1285BA6881413517D3E372BB20E54BFB /* func_common.hpp */,
+				A83A79A81D80AA8398D6EBE0E52C084F /* func_exponential.hpp */,
+				BF061E1A2C0AF4AAA34649A2E8A6128C /* func_geometric.hpp */,
+				BBD2D423544F4914B68B4D0F0207EFE2 /* func_integer.hpp */,
+				321A82FB288B604B2269F3406054CDBB /* func_matrix.hpp */,
+				C4DDF957501F4289A294CD722C5EDBE2 /* func_packing.hpp */,
+				ACFB1078D4FBE34E2A9818A2F6F75005 /* func_trigonometric.hpp */,
+				1BA84E843F44C8F71CE7D6F836CF7B3D /* func_vector_relational.hpp */,
+				0A5E9B7198AC8890CC9C64D8A8DA24BC /* fwd.hpp */,
+				FB298E11B2B177155FA0C61C079C3B3D /* geometric.hpp */,
+				25EAE6749BFF01CB8C8BBEA995869357 /* glm.hpp */,
+				224B6065478FF88115589EC8080D3B61 /* gradient_paint.hpp */,
+				011AD23DC8314CBA8A506023D46E8B73 /* handed_coordinate_space.hpp */,
+				3CC8E3786D62BF03C421B16F4CD78D97 /* hash.hpp */,
+				26FECA32293E87B298519B2409007CE1 /* integer.hpp */,
+				DE66B975FB0FBBA05BD3F153D1416A9D /* integer.hpp */,
+				AF74CC0BB084AEED8FCEFEB61F6F5330 /* integer.hpp */,
+				A9935E39BB78294B3A419EE83569F474 /* intersect.hpp */,
+				EC0A00863806AF8D5B4989649B911A95 /* intrinsic_common.hpp */,
+				ABA8DE78218A1CFBA606F6D385961D40 /* intrinsic_exponential.hpp */,
+				EB7E25B799BC14E36A02DB540C6C2324 /* intrinsic_geometric.hpp */,
+				38DC37E5D88CA1E9A4135766EAC09EA8 /* intrinsic_integer.hpp */,
+				F54450D0002A01A0D883F6B3BE5F8846 /* intrinsic_matrix.hpp */,
+				262E502870FFFBCC2AA4DB4A3C6C7797 /* intrinsic_trigonometric.hpp */,
+				E5C910FC31FA0753FA031C6C75FB3B78 /* intrinsic_vector_relational.hpp */,
+				08CF8A045C938D7C1DA14A136D40B583 /* io.hpp */,
+				9CDC733DEC62842D8D170165F368EB57 /* log_base.hpp */,
+				3C1F0B8D3BC279ADA79A16B3C25444DB /* mat2x2.hpp */,
+				6A13C7AB5B40EE3A6E9AF70A7BB3DD0E /* mat2x3.hpp */,
+				F537BE4267205500506FEE53E0795A6E /* mat2x4.hpp */,
+				B737E40689FB4DB12778E1AFD9EFA70E /* mat3x2.hpp */,
+				3A370DB60B9342D40B17E194E5DAC119 /* mat3x3.hpp */,
+				5E6E3D82BF6D92D1C1A07FC9CF5C8552 /* mat3x4.hpp */,
+				ABD90C084D432672743413D2A872B079 /* mat4x2.hpp */,
+				517588ED1AE6ED7A8250712058448CF5 /* mat4x3.hpp */,
+				91DF8BCA7A32913F5ACB6B40296F5A1D /* mat4x4.hpp */,
+				64FAB47E49E14611CF65786248D36D9E /* matrix.hpp */,
+				83BEAD31CBAA8F82F8985BE11F7F1DE6 /* matrix_access.hpp */,
+				9845EC44D67F81E9A47AB24B3538B6C2 /* matrix_cross_product.hpp */,
+				55FB9F909382DC77F43DA3AB76FBA6DD /* matrix_decompose.hpp */,
+				FF56729848F4BC3647B913CA536D457A /* matrix_integer.hpp */,
+				CDBE6626C6968FE40EE71140066F7E04 /* matrix_interpolation.hpp */,
+				AB9430C937D8032735F389691FFEB4F9 /* matrix_inverse.hpp */,
+				242C1B82A618DE206D8B61419C6F22A1 /* matrix_major_storage.hpp */,
+				F24BB0ED966C135D43008C465B1A2DCD /* matrix_operation.hpp */,
+				19164CD1B6063E17144827DB791138BB /* matrix_query.hpp */,
+				C5F41091B5B79F16A5DBE9F167970B81 /* matrix_transform.hpp */,
+				1249C866A3563DB9A2B3A4C73D292132 /* matrix_transform_2d.hpp */,
+				ED405C292577A2C8CC8C086B121CCDBD /* mixed_product.hpp */,
+				FBC98A92209C467355F1462DF8C0522B /* noise.hpp */,
+				98FC010F3CFB6B380E32B59F6AB229A9 /* norm.hpp */,
+				72F3E49C2DB21BADF4B95F3B7FEC105E /* normal.hpp */,
+				224F89465D03973A1668C111C4832699 /* normalize_dot.hpp */,
+				E9D6342CB7DBE10FC83739B618437C7E /* number_precision.hpp */,
+				413C1A5DF5646E4334F70ED47F169D29 /* optimum_pow.hpp */,
+				9B2CBE86BA3F1138C209CDE4BB9C8AC7 /* orthonormalize.hpp */,
+				37066B05776FDFC0EBCB03838418F346 /* packing.hpp */,
+				A7996E02D57AB47942FBB7FF00D28A59 /* packing.hpp */,
+				20144EF62724F44C2E84E3FD0ACD9400 /* perpendicular.hpp */,
+				702836CB59E5F9E281C07305F63D2DB7 /* polar_coordinates.hpp */,
+				B8086FF5284FCBE10C1F67D1924B6301 /* precision.hpp */,
+				4F7E1F30B0BB66C2B99B941813D0D2DA /* projection.hpp */,
+				5FA6E49A3041095FF797865D948F43BE /* quaternion.hpp */,
+				E2844F893CC7A948424970D3207A0F92 /* quaternion.hpp */,
+				BA37E67BA91395AED6089F84A0BEEC66 /* random.hpp */,
+				9DFEF3E525AA996B998DE526827EE925 /* range.hpp */,
+				4F3F0F222CCB3945D7E38F49B8909E9F /* raw_data.hpp */,
+				CDD2F800EB0F2F03D8260F6C4D366138 /* reciprocal.hpp */,
+				712889FA84A84FAC53B2F4412E36FECE /* rotate_normalized_axis.hpp */,
+				E1603C230F78153BDFF71D75DBC7D1FB /* rotate_vector.hpp */,
+				0133DD7D24707C50AAA0B474D81DEF5D /* round.hpp */,
+				527B8B595BE8D2650B0CB313557678C3 /* scalar_multiplication.hpp */,
+				E285D1B243E6DC76597F931481B145EE /* scalar_relational.hpp */,
+				CE77C39DCF12C2674458F27A62C2A70E /* setup.hpp */,
+				076CD91D6DB27EA7ADFE6ADEC1AEB216 /* simd_mat4.hpp */,
+				DB824491DF1243B679B050586C5E9BE8 /* simd_quat.hpp */,
+				145C39AF76BA468BDB619597C0EE36AE /* simd_vec4.hpp */,
+				3819A4ED3B1B7A1CDF1716C1130586C8 /* spline.hpp */,
+				78D9FF24D82701AA441BB56EA632A51E /* std_based_type.hpp */,
+				B4BC67E5CA869437F7E8BF9470F91C9F /* string_cast.hpp */,
+				A564C3321569CD6904B60BEEF8C82EB3 /* transform.hpp */,
+				6CD1FD8217CC3FF7A822407937B29CE6 /* transform2.hpp */,
+				3526AC7E7428AF12B60AB3F19094F839 /* trigonometric.hpp */,
+				EE2257AB7066055055F8AE329B9475F0 /* type_aligned.hpp */,
+				D04D5901EED07D792AD5E1E130038A23 /* type_float.hpp */,
+				94C57D6705C9EFCC11132B471A0C637C /* type_gentype.hpp */,
+				9503FF4BC7E1D9DE110ECEDD85CD236E /* type_half.hpp */,
+				2407B9068A438D62804015E85F41F281 /* type_int.hpp */,
+				83DD13B97FFFB41FC38DB32B1AEBB22A /* type_mat.hpp */,
+				45D37A6DC62F2AE0C251BD7B5E14FF0E /* type_mat2x2.hpp */,
+				66251FA61A6F43B7D04A05078E12A5F6 /* type_mat2x3.hpp */,
+				AF500091097D57A43250D5C587B0F6E5 /* type_mat2x4.hpp */,
+				74C4D838964F5F570D6F4EA6A6D067D3 /* type_mat3x2.hpp */,
+				188E841FED862D8A6494EBFD58D4E90F /* type_mat3x3.hpp */,
+				FEC932D19BCAC74FF892F5E690C8E983 /* type_mat3x4.hpp */,
+				978F7573B9BF0DBB27651001D8C05550 /* type_mat4x2.hpp */,
+				77FEAEE0ABD3DA55B53C2CD50D94F4F9 /* type_mat4x3.hpp */,
+				E9234485E0B170B7DE409A5F156B50D3 /* type_mat4x4.hpp */,
+				40560827990FF4C8251D07727234B41B /* type_precision.hpp */,
+				63960FD4CC9AC601144E72D1954DEC45 /* type_ptr.hpp */,
+				B23CEC1D10094352D00B374076A0EB9B /* type_vec.hpp */,
+				881474634220A7AE20B7CCF36F1F8B31 /* type_vec1.hpp */,
+				411CF1D44F64F3A93456CC7642FD6CB2 /* type_vec2.hpp */,
+				7F7C6C54BBD2700E64377369205EAFE8 /* type_vec3.hpp */,
+				DA212ADE7A059BE333E2828F6D9C320E /* type_vec4.hpp */,
+				6155D9DDFB82CF7EE2BC375E397DB22D /* ulp.hpp */,
+				9070EDF714AF5B77B9A2DE7F01B20A59 /* vec1.hpp */,
+				1FC254D83A170EF71DFBC050779D7151 /* vec2.hpp */,
+				1FC41CD44A69BE01F3AC40EECC1EC25B /* vec3.hpp */,
+				4B89D0D3F58F850C53300831E9FE4BA1 /* vec4.hpp */,
+				18BE37F218693A0178B382C48F1E1EDB /* vector_angle.hpp */,
+				836BAE34CF8136D8F29E15616AE0A43F /* vector_query.hpp */,
+				E23DB693D2349DCAE90424F8F5230AC6 /* vector_relational.hpp */,
+				18D6FCE413BE443C7733D5BB689950B5 /* wrap.hpp */,
+			);
+			path = glm;
+			sourceTree = "<group>";
+		};
+		54B8408E71184C7760815335760BE668 /* UriParser-cpp */ = {
+			isa = PBXGroup;
+			children = (
+				49909F494B65B54C7E78A9003FFDBF15 /* UriCodec.cpp */,
+				FE8A756F8F28042414B8ED722FE94C61 /* UriParser.hpp */,
+				1F6F2900810B8A274D8C80837DC35E52 /* Support Files */,
+			);
+			path = "UriParser-cpp";
+			sourceTree = "<group>";
+		};
+		65D299D5CD6B11CA41B347EE265636D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6EF2AC78681C71871B4F7276AF6896B /* UriParser.framework */,
+				17462BC224D4482B7604A17C14C82AA8 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A05A685EB74C34E0126262685613173 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				718A21D8B330A6FF1D5C4471EBB183B2 /* boost */,
+				54407ED7C9D590E8E0CDBC12BF7AD5CE /* glm */,
+				54B8408E71184C7760815335760BE668 /* UriParser-cpp */,
+				FD9216371BBE41E8EF2C14B243F28506 /* VideoCore */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		718A21D8B330A6FF1D5C4471EBB183B2 /* boost */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = boost;
+			sourceTree = "<group>";
+		};
+		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */,
+				79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */,
+				D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */,
+				87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */,
+				F021A9FA0F7EA48C428A2146A33B434B /* Pods-dummy.m */,
+				E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */,
+				CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */,
+				48F11309FD2B3B6FA8EA6264A0140A2D /* Pods-umbrella.h */,
+				360671B98C8087DBCFFAD4E0D2ABDD13 /* Pods.debug.xcconfig */,
+				00B54AFE45D43E38C8C05867F27232FC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				65D299D5CD6B11CA41B347EE265636D5 /* Frameworks */,
+				6A05A685EB74C34E0126262685613173 /* Pods */,
+				BC5307E2FF895D960F9D3506824EB22B /* Products */,
+				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC5307E2FF895D960F9D3506824EB22B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80CC71BE461C557376544E723EDEB2AD /* Pods.framework */,
+				00AA34E97DD31B01A7B591A72F8EBE47 /* UriParser.framework */,
+				F02F164CA21AEF2C243EF6A4F3006307 /* videocore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD9216371BBE41E8EF2C14B243F28506 /* VideoCore */ = {
+			isa = PBXGroup;
+			children = (
+				8D154CCA633E4FDF135C1B067BA634D3 /* AACEncode.cpp */,
+				733FBFCCB6DAA3556FBB3961536FA902 /* AACEncode.h */,
+				C79840669DC89C3CF316FEA1C8BDCCEF /* AACPacketizer.cpp */,
+				D91E58764E7F06E9C2054C2DD82858EC /* AACPacketizer.h */,
+				594EEE6104190AA2A1BC3EA45CBD791D /* AspectTransform.cpp */,
+				E4331D7B1065B3F8E480D54F41232BE1 /* AspectTransform.h */,
+				1FAA3383FAC725E4DB6329AEFEBA39E0 /* AudioMixer.cpp */,
+				314FE6BF7AC3097FA9D807B833BBAAE5 /* AudioMixer.h */,
+				535B97270163768302371409627E1D5C /* BasicVideoFilterBGRA.cpp */,
+				0C313C8C7AF311FA1F16E07008F9491E /* BasicVideoFilterBGRA.h */,
+				24D94E9E9CB01182436744868117334E /* BasicVideoFilterBGRAinYUVAout.cpp */,
+				CB9EC134A2D4B352458B6C6BE975AB25 /* BasicVideoFilterBGRAinYUVAout.h */,
+				7D24E63E9746DF729D2FCD1FABA8C559 /* Buffer.hpp */,
+				FBDDCD2706A1585538595FC73C5149D6 /* CameraSource.h */,
+				73005779F87B7CB4E814B45A4C126E4E /* CameraSource.mm */,
+				DACB38FFCF83626D53AC211ACA484827 /* FilterFactory.cpp */,
+				0B0C1A9E8129AB7E54FD76ACFF9F7A1D /* FilterFactory.h */,
+				3DA1EBB72E8BB5CE6DF2FAD08E165DFC /* FisheyeVideoFilter.cpp */,
+				29AA6383867FD4C658551E4D3F515ACF /* FisheyeVideoFilter.h */,
+				A99413BB5CAA9AC1649015C8B94B9B44 /* GenericAudioMixer.cpp */,
+				AA321280D58E859FEE299FCEFFF21089 /* GenericAudioMixer.h */,
+				FDFC38BBCF8C44567203659282B8F414 /* GenericPixelBuffer.cpp */,
+				84955D5AC207F63863AA57FF874E2BCC /* GenericPixelBuffer.h */,
+				1306C5ABF69CA02F2E55B6388AB9E6E6 /* GLESUtil.h */,
+				990FE94B6118C65669777B3CA3730237 /* GLESVideoMixer.h */,
+				CB2CE9228B353D45F1A607F448234DFB /* GLESVideoMixer.mm */,
+				96D625905E21C01A044DE28A28EF0D3E /* GlowVideoFilter.cpp */,
+				E1C21D627CB6527B84525EFE5AEEE942 /* GlowVideoFilter.h */,
+				45932AA01F489A9ADF89C5AC62F3E436 /* Golomb.cpp */,
+				F2382D7E80AE20BECD05E3F76B8756C6 /* Golomb.h */,
+				17031C3520D66FEF54A87AB2DE80FA2A /* GrayscaleVideoFilter.cpp */,
+				1C729C0FF8CACED0D28BEB5D5F0F1CC5 /* GrayscaleVideoFilter.h */,
+				AD7CF3EB356221726A6D76CFA5D99EE6 /* H264Encode.h */,
+				6565C82D4E3F3DECBE2E9EA002074618 /* H264Encode.h */,
+				E35C2E6307A4F064EAF099A06D75F956 /* H264Encode.mm */,
+				E11A50C0765A51465B893268618A03EA /* H264Encode.mm */,
+				5CBEFA0E96502DEC41ADDDF46B7C0CC7 /* H264Packetizer.cpp */,
+				0482D3C7F4D0B525C8E39B2411A2CC0F /* H264Packetizer.h */,
+				7E35AF6AA30A662D70F1B8C649DD09F7 /* IAudioMixer.hpp */,
+				F79D9AE45B518EEAB7481AABC49D82D6 /* IEncoder.hpp */,
+				07A393D79C1754CDBA14176C5FCCF64D /* IFilter.hpp */,
+				A91F4B388914CCE4D5A0B8382DD34981 /* IMetaData.hpp */,
+				01918FA5C52AD8E696B6E8D30C00EDBE /* IMixer.hpp */,
+				F9090C5B3401C13658A729D2E8E674B9 /* InvertColorsVideoFilter.cpp */,
+				890D3EFB6AD02DB624473A849A30DEC7 /* InvertColorsVideoFilter.h */,
+				AEF98F26E84F829E5FB6AD41CB3D4C46 /* IOutput.hpp */,
+				E9A394516A14E6BDDA43C836485BA201 /* IOutputSession.hpp */,
+				CDF1BD14504E7844B3AB7530C7AEC0F5 /* IPixelBuffer.hpp */,
+				786FB5A41390B5E950908D6A77B6C6E6 /* ISource.hpp */,
+				9B11257115349682F2C1B81086EB14E5 /* IStreamSession.hpp */,
+				84ABA6ED2E6F05B2C6A347EE4EA426F3 /* IThroughputAdaptation.h */,
+				9FE567090F9CC6C4E9BE09083C73D616 /* ITransform.hpp */,
+				8499EFD2FEEA39B5C61522B2645A4284 /* IVideoFilter.hpp */,
+				38C17182EC71AEA217EB26826B3C0916 /* IVideoMixer.hpp */,
+				DB8A8C04D2155A9BD207B70AAA065014 /* JobQueue.hpp */,
+				2D7541ED8117D72918C8510D5B500B2F /* MicSource.h */,
+				0077AEB2C15142728BD6C5314B8B3F65 /* MicSource.mm */,
+				34425BB8AE4D8CA145EC8238294E4BDF /* MP4Multiplexer.h */,
+				39455A273AE6AB3D5150F573058A7F65 /* MP4Multiplexer.mm */,
+				6E2F71B6DAAEA566821896A3A2945CAE /* PixelBuffer.cpp */,
+				75106AE62E97BFACC5DBC95749FA54CB /* PixelBuffer.h */,
+				08C44484026EEBCC5B1B0C9B9653C217 /* PixelBufferSource.h */,
+				9B4ADEA027A29388FC812B5B134DCDD6 /* PixelBufferSource.mm */,
+				851336D8F21110554C4F7AA6DCDE0650 /* PositionTransform.cpp */,
+				561F5E9E13BC2A15DDD785FBB2766209 /* PositionTransform.h */,
+				08F07B36036BA6F692F1B7FC98BD0041 /* RTMPSession.cpp */,
+				66EA1CECBEFBE2E12CE4A92510C69671 /* RTMPSession.h */,
+				CC67662CFE9E336AC0430F3FEECDC040 /* RTMPTypes.h */,
+				C464A98A7B400A0C5939EDDD05BCB468 /* SepiaVideoFilter.cpp */,
+				031D8B088B2983A4ACC28135C45B659B /* SepiaVideoFilter.h */,
+				00A55B5EECB19C44BC077D195D2C9B3B /* Split.cpp */,
+				370699770F7B3C66195174C951C197EA /* Split.h */,
+				3412A68AD8081DB07B0925FEF703D147 /* StreamSession.h */,
+				2F3E71A908697DC2EE7EE9A7CB470CD3 /* StreamSession.mm */,
+				23C7A69DF619AFE6C423B7A2FBAF036D /* TCPThroughputAdaptation.cpp */,
+				C0DC6359791A93A02F8DE97E76543EC4 /* TCPThroughputAdaptation.h */,
+				4CC0348328B7A4A56A8362F005EA8374 /* util.h */,
+				55A480D05567233FA3E0DD03A3B586C3 /* VCPreviewView.h */,
+				7729B66A2C98030C1683290FF6FA941D /* VCPreviewView.mm */,
+				1240B422F2E0588ED8F4537E95BA78B0 /* VCSimpleSession.h */,
+				A8C88C5AB7DC8A6D548B7AB1A9E7808B /* VCSimpleSession.mm */,
+				00E438CBCFE231A032B01922FB080D9C /* Support Files */,
+			);
+			path = VideoCore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3EF5F03A2F361580C253F744BDAFB04F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D879C8C3F5C9F680C9CB5C57291B5D88 /* UriParser-cpp-umbrella.h in Headers */,
+				FE6642C290157A179D90D0B603BBF1D4 /* UriParser.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AE10713DB50250585B0B6AE9FA17EAD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A73E7E6DCD5F5E1907743BC9BC392B30 /* AACEncode.h in Headers */,
+				FD87F2980DA6E11362CF3AFD060189EA /* AACPacketizer.h in Headers */,
+				73831CFF5BA9E1D5526B9B9905DA1F2C /* AspectTransform.h in Headers */,
+				311AAC558833C0A1BAD6051387C4F2FD /* AudioMixer.h in Headers */,
+				EEF6613F58CD7D1A9EF243B99509257D /* BasicVideoFilterBGRA.h in Headers */,
+				70B4854E2E00835B5EDEABEAEB45B77B /* BasicVideoFilterBGRAinYUVAout.h in Headers */,
+				C3EF35F60D80A9F546A93224F1EC4C42 /* Buffer.hpp in Headers */,
+				FE8CEE9C9E77C4659E5F645746B8CBCC /* CameraSource.h in Headers */,
+				84840E15DD8395BB17150D07891ABA2A /* FilterFactory.h in Headers */,
+				3F70F6F58096F8DA3533E3BE47DA9E16 /* FisheyeVideoFilter.h in Headers */,
+				B1AA3B1FC88ABD191DE66167935A849C /* GenericAudioMixer.h in Headers */,
+				A8792217F4EDFCD4625FACBBAE2DCC94 /* GenericPixelBuffer.h in Headers */,
+				60D74A0D182AF72717A286A08D832A45 /* GLESUtil.h in Headers */,
+				4A87667333248B337D5D74AC69E90AC7 /* GLESVideoMixer.h in Headers */,
+				3741CDE9BE464CE78DE713FB58E8484F /* GlowVideoFilter.h in Headers */,
+				17834028EE41A4E0B742BBBBC2BFD062 /* Golomb.h in Headers */,
+				0B19C7B2A12A3D568E91BDC49C79B749 /* GrayscaleVideoFilter.h in Headers */,
+				D0ADDB781C6D5666AFDB9A1EDE5FC964 /* H264Encode.h in Headers */,
+				607CF3140A77B4CA4AA05F7F218CFC11 /* H264Encode.h in Headers */,
+				C464A68ED9FEFB886755967F447B524D /* H264Packetizer.h in Headers */,
+				BE8F108069AF19A906797224CFD4A8EC /* IAudioMixer.hpp in Headers */,
+				003A6105AD330A32334C02E204AA1DD9 /* IEncoder.hpp in Headers */,
+				A406D46710871F73938466A7AE175FA1 /* IFilter.hpp in Headers */,
+				0468C936D74AE23CF1797864BC553B6C /* IMetaData.hpp in Headers */,
+				99E1069B7023ADE4478FD6D89CF3C602 /* IMixer.hpp in Headers */,
+				771F33C4858C917A055E049E79B3D761 /* InvertColorsVideoFilter.h in Headers */,
+				0CCFEC23674B8138E822225F43025F26 /* IOutput.hpp in Headers */,
+				07DDE8B051ABFFDEE78DE4DC48E17DC2 /* IOutputSession.hpp in Headers */,
+				D327ACC34CB8EEBC920A3E1AC2F7A256 /* IPixelBuffer.hpp in Headers */,
+				23EDA20F5F27D37A2970EDA4974A8E2E /* ISource.hpp in Headers */,
+				85D6805A42C648B79DBB01A4E20CBC39 /* IStreamSession.hpp in Headers */,
+				1443A33F88582D8FA5CDB3207EA81EB4 /* IThroughputAdaptation.h in Headers */,
+				0F49E2546B7BDEF58039D0A82139F0C7 /* ITransform.hpp in Headers */,
+				B72C81356524711F2D3E4DE56E0C11EB /* IVideoFilter.hpp in Headers */,
+				7F0CE3ABD72CC9A72B7E9F2391125F51 /* IVideoMixer.hpp in Headers */,
+				FA3203BE00B06CB4F4647925103EC647 /* JobQueue.hpp in Headers */,
+				90333F8201CA606E00F237E96F3948BB /* MicSource.h in Headers */,
+				CC2DF84E4DC82F292AE4EC8D882044DA /* MP4Multiplexer.h in Headers */,
+				0E51DF4E447BB55EC0F093A3B8B54AFF /* PixelBuffer.h in Headers */,
+				999C7E850B1F3F834D880AD34E2E6F87 /* PixelBufferSource.h in Headers */,
+				34BEE87D7CD21BA75D00383948E8401C /* PositionTransform.h in Headers */,
+				D9825D728F6BBB46999E79168842C6BF /* RTMPSession.h in Headers */,
+				5EE9C74B798345DD8237FE73D9A5F537 /* RTMPTypes.h in Headers */,
+				9BFC4B510357C15C594FC55850F692B8 /* SepiaVideoFilter.h in Headers */,
+				4B060E4F434D9603624E730B44041FF3 /* Split.h in Headers */,
+				38214A8D5281D4AAC1CC5D7CD2048A5A /* StreamSession.h in Headers */,
+				4801D1A3A684F90C5F1BAEF9D772BFB4 /* TCPThroughputAdaptation.h in Headers */,
+				5599A04FB0C2A4C39F06039463A8C802 /* util.h in Headers */,
+				4A58E6B06A64B6F1CA901787E147E581 /* VCPreviewView.h in Headers */,
+				D93CA5BBD298F888C81846994CE3C784 /* VCSimpleSession.h in Headers */,
+				7A855BA1834C76F6B9BB69475012C688 /* VideoCore-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5391BEACE6D47D3916ACEF7923A0948B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9ADE940148CE50259F3A6437731BE53 /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		42D295D4DD9CA34DD72E018404351403 /* VideoCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A313EEF48171F96633E970DFD587C358 /* Build configuration list for PBXNativeTarget "VideoCore" */;
+			buildPhases = (
+				E2D2DB260427A6AC04B48FD4635466B4 /* Sources */,
+				BA7E8E0078712933E6675E5DE7AB3F1B /* Frameworks */,
+				4AE10713DB50250585B0B6AE9FA17EAD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DF61FDC35ECCEA7B17F1DE92B4B7BD2 /* PBXTargetDependency */,
+			);
+			name = VideoCore;
+			productName = VideoCore;
+			productReference = F02F164CA21AEF2C243EF6A4F3006307 /* videocore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		778457EF84C94BF3246F7F0E00F46C0B /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3A9820D7325A2A62992E7546609CBA7 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				E9BD7CFFB588582AEDCD789BCEDA283D /* Sources */,
+				E23E519052D6B374B6B0BA0FA1243896 /* Frameworks */,
+				5391BEACE6D47D3916ACEF7923A0948B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F893DE22222976DBEAD2A4EEC3E5AE9F /* PBXTargetDependency */,
+				F4B57FBC69763E50FDB7EAA413A0009C /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 80CC71BE461C557376544E723EDEB2AD /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		993FEDE84EE302E8C1025B798ACFC30A /* UriParser-cpp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF207CBD8C197FF9B2D8BA1054647F91 /* Build configuration list for PBXNativeTarget "UriParser-cpp" */;
+			buildPhases = (
+				C2EE3BCF88FD939B41BA9AE0086AD766 /* Sources */,
+				81E9AFF1D8147A661DEE7B50086B6F95 /* Frameworks */,
+				3EF5F03A2F361580C253F744BDAFB04F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UriParser-cpp";
+			productName = "UriParser-cpp";
+			productReference = 00AA34E97DD31B01A7B591A72F8EBE47 /* UriParser.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BC5307E2FF895D960F9D3506824EB22B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				778457EF84C94BF3246F7F0E00F46C0B /* Pods */,
+				993FEDE84EE302E8C1025B798ACFC30A /* UriParser-cpp */,
+				42D295D4DD9CA34DD72E018404351403 /* VideoCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2EE3BCF88FD939B41BA9AE0086AD766 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A909BED9ED853C0474F658025048E817 /* UriCodec.cpp in Sources */,
+				590088070FFE86EED127682011B54A26 /* UriParser-cpp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D2DB260427A6AC04B48FD4635466B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				878500C1EF6A270313EE0F8557B38DD0 /* AACEncode.cpp in Sources */,
+				9F1B12F4F8EB18A08259666282EE4518 /* AACPacketizer.cpp in Sources */,
+				D4EEDA5DC301533ECFA0B80A8DC07B33 /* AspectTransform.cpp in Sources */,
+				5A65EDC6AFFD8E03B49D72D5514790E8 /* AudioMixer.cpp in Sources */,
+				493EC56DE129C6FCFCCD842E38569B45 /* BasicVideoFilterBGRA.cpp in Sources */,
+				DAB4581B33CB8459BFDF8D1DD75DA0EA /* BasicVideoFilterBGRAinYUVAout.cpp in Sources */,
+				3ED9F8B865544BBEACC5DE6F2C6840F5 /* CameraSource.mm in Sources */,
+				BF20A52ED3998222F5E713FC8E9AA70E /* FilterFactory.cpp in Sources */,
+				E846135D1B181E1AB89035AF1C4EE39C /* FisheyeVideoFilter.cpp in Sources */,
+				0E3086118EA77BF92044F36B8B51795C /* GenericAudioMixer.cpp in Sources */,
+				E3A66CADF105154711F587164CD98575 /* GenericPixelBuffer.cpp in Sources */,
+				0C82E7062E3E785A9B247F2BE93F3514 /* GLESVideoMixer.mm in Sources */,
+				5F94E52F3DA73E7868CF94A923950319 /* GlowVideoFilter.cpp in Sources */,
+				52DCBEC7E583CE347E1C99355693AF3D /* Golomb.cpp in Sources */,
+				61FB67F63D2F55CBC87C5EFD277BD66E /* GrayscaleVideoFilter.cpp in Sources */,
+				B6141B848B5676C22974D10BD0C36530 /* H264Encode.mm in Sources */,
+				E6D84E2840697BE3BBA9FD14B45FEF6E /* H264Encode.mm in Sources */,
+				8CF172CC19EC44FA8358155811760A83 /* H264Packetizer.cpp in Sources */,
+				D1A46E3FE3630BAF0F74D1F336C6F30E /* InvertColorsVideoFilter.cpp in Sources */,
+				72F891A4FEC84FAB6C2926CD48C3629D /* MicSource.mm in Sources */,
+				3970E2ED1A964CAF5656FF05E1B3CF45 /* MP4Multiplexer.mm in Sources */,
+				5A9123D66A045416AFD9085677A1E678 /* PixelBuffer.cpp in Sources */,
+				E8BAE7C44C5D6BB9E9CD9BD7FDFF3E50 /* PixelBufferSource.mm in Sources */,
+				9FDF930981043FADEA89BF369258B816 /* PositionTransform.cpp in Sources */,
+				2CD246EE1FBD1A038E6991AE0A1632DF /* RTMPSession.cpp in Sources */,
+				A5C9C109C34A969B8F5BB13D458B9301 /* SepiaVideoFilter.cpp in Sources */,
+				6F17821F90BED143AAC8B6CCB3A68F3E /* Split.cpp in Sources */,
+				6AE1A91C5D84DC45C39FA120C7310174 /* StreamSession.mm in Sources */,
+				D9606A750000983D13BF6C94DD56FFD7 /* TCPThroughputAdaptation.cpp in Sources */,
+				73334424D5959BBC45365FDAEA4560A0 /* VCPreviewView.mm in Sources */,
+				9E7915F33A90075DF346C2852F194A75 /* VCSimpleSession.mm in Sources */,
+				12D48D64B3B5671A704267EF094F4B3B /* VideoCore-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BD7CFFB588582AEDCD789BCEDA283D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				682C28BB973FB0832E73EBD5EB8B7F61 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DF61FDC35ECCEA7B17F1DE92B4B7BD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UriParser-cpp";
+			target = 993FEDE84EE302E8C1025B798ACFC30A /* UriParser-cpp */;
+			targetProxy = 4F0D853B85592389CABB4FC0BD1C0075 /* PBXContainerItemProxy */;
+		};
+		F4B57FBC69763E50FDB7EAA413A0009C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VideoCore;
+			target = 42D295D4DD9CA34DD72E018404351403 /* VideoCore */;
+			targetProxy = FF1C047390F499C59F5E105C58812284 /* PBXContainerItemProxy */;
+		};
+		F893DE22222976DBEAD2A4EEC3E5AE9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UriParser-cpp";
+			target = 993FEDE84EE302E8C1025B798ACFC30A /* UriParser-cpp */;
+			targetProxy = F68849ABAD9E066780A8A987FB3789EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0726CF4BF11D2F1ECA66D524D04DCDD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 360671B98C8087DBCFFAD4E0D2ABDD13 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		081563D8673C90CC10D52FABBBDB2601 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9146978780012572EB3B1A9D61B068E /* VideoCore.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.3.2;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.3.2;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VideoCore/VideoCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VideoCore/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VideoCore/VideoCore.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = videocore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		200821EF07C1553914BBCE8602DAFE6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D4C7F1C01B3BCD8BC2DCF0FEC525229 /* UriParser-cpp.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.3;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.3;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UriParser-cpp/UriParser-cpp-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UriParser-cpp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UriParser-cpp/UriParser-cpp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = UriParser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3258455A9B577CD2B4406C75096F369F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00B54AFE45D43E38C8C05867F27232FC /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		542468210658B3E29D47AB722AD45805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D4C7F1C01B3BCD8BC2DCF0FEC525229 /* UriParser-cpp.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.3;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.3;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UriParser-cpp/UriParser-cpp-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UriParser-cpp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UriParser-cpp/UriParser-cpp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UriParser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F268A6059DEF07D913268970B3953A53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9146978780012572EB3B1A9D61B068E /* VideoCore.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.3.2;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.3.2;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VideoCore/VideoCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VideoCore/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VideoCore/VideoCore.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = videocore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A313EEF48171F96633E970DFD587C358 /* Build configuration list for PBXNativeTarget "VideoCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F268A6059DEF07D913268970B3953A53 /* Debug */,
+				081563D8673C90CC10D52FABBBDB2601 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF207CBD8C197FF9B2D8BA1054647F91 /* Build configuration list for PBXNativeTarget "UriParser-cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				200821EF07C1553914BBCE8602DAFE6C /* Debug */,
+				542468210658B3E29D47AB722AD45805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3A9820D7325A2A62992E7546609CBA7 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0726CF4BF11D2F1ECA66D524D04DCDD2 /* Debug */,
+				3258455A9B577CD2B4406C75096F369F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

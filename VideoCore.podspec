@@ -17,14 +17,47 @@ Pod::Spec.new do |s|
   s.header_dir          = 'videocore'
   s.header_mappings_dir = '.'
 
-  s.source_files        = [ 'mixers/**/*.h*', 'mixers/**/*.cpp', 'mixers/**/*.m*', 
-                            'rtmp/**/*.h*', 'rtmp/**/*.cpp', 'rtmp/**/*.m*',
-                            'sources/**/*.h*', 'sources/**/*.cpp', 'sources/**/*.m*',
-                            'stream/**/*.h*', 'stream/**/*.cpp', 'stream/**/*.m*',
-                            'system/**/*.h*', 'system/**/*.cpp', 'system/**/*.m*',
-                            'transforms/**/*.h*', 'transforms/**/*.cpp', 'transforms/**/*.m*',
-                            'api/**/*.h*', 'api/**/*.m*',
-                            'filters/**/*.cpp', 'filters/**/*.h*' ]
+  s.source_files	=  'api/**/*.{h*,m*}'
+
+  s.subspec 'Mixers' do |ss|
+	ss.source_files = 'mixers/**/*.{h*,cpp,m*}'
+  end
+
+  s.subspec 'RTMP' do |ss|
+	ss.source_files = 'rtmp/**/*.{h*,cpp,m*}'
+  end
+
+  s.subspec 'Sources' do |ss|
+	ss.source_files = 'sources/**/*.{h*,cpp,m*}'
+  end
+
+  s.subspec 'Stream' do |ss|
+	ss.source_files = 'stream/**/*.{h*,cpp,m*}'
+  end
+
+  s.subspec 'System' do |ss|
+	ss.source_files = 'system/**/*.{h*,cpp,m*}'
+  end
+
+  s.subspec 'Transforms-Apple' do |ss|
+	ss.source_files = 'transforms/Apple/*.{h*,cpp,m*}'
+  end
+
+  s.subspec 'Transforms-RTMP' do |ss|
+	ss.source_files = 'transforms/RTMP/*.{h*,cpp,m*}'
+  end
+
+  s.subspec 'Transforms-iOS' do |ss|
+	ss.source_files = 'transforms/iOS/*.{h*,cpp,m*}'
+  end
+
+  s.subspec 'Transforms' do |ss|
+	ss.source_files = 'transforms/*.{h*,cpp,m*}'
+  end
+
+  s.subspec 'Filters' do |ss|
+	ss.source_files = 'filters/**/*.{h*,cpp}'
+  end
 
   s.frameworks          = [ 'VideoToolbox', 'AudioToolbox', 'AVFoundation', 'CFNetwork', 'CoreMedia',
                             'CoreVideo', 'OpenGLES', 'Foundation', 'CoreGraphics' ]

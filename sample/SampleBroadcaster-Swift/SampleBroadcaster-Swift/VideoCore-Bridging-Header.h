@@ -34,6 +34,7 @@
 #ifndef SampleBroadcaster_Swift_VideoCore_Bridging_Header_h
 #define SampleBroadcaster_Swift_VideoCore_Bridging_Header_h
 
-#import "VCSimpleSession.h"
+//#import "VCSimpleSession.h"
+#import <VideoCore/VCSimpleSession.h>
 
 #endif
