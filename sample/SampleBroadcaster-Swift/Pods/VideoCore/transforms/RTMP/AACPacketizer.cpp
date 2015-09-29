@@ -25,8 +25,7 @@
 #include <videocore/transforms/RTMP/AACPacketizer.h>
 #include <vector>
 #include <videocore/system/Buffer.hpp>
-//#include <videocore/rtmp/RTMPSession.h>
-#include "RTMPSession.h"
+#include <videocore/rtmp/RTMPSession.h>
 
 namespace videocore { namespace rtmp {
 

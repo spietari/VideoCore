@@ -15,6 +15,16 @@
   "requires_arc": false,
   "header_dir": "videocore",
   "header_mappings_dir": ".",
+  "public_header_files": [
+    "mixers/**/*.h",
+    "rtmp/**/*.h",
+    "sources/**/*.h",
+    "stream/**/*.h",
+    "system/**/*.h*",
+    "transforms/**/*.h",
+    "api/**/*.h",
+    "filters/**/*.h"
+  ],
   "source_files": "api/**/*.{h*,m*}",
   "frameworks": [
     "VideoToolbox",
