@@ -87,13 +87,13 @@ CHECKOUT OPTIONS:
     :commit: a101bfbe2a5e0f2441a4311ca7601298d0dfe0e7
     :git: https://github.com/maxcampolo/glm.git
   VideoCore:
-    :commit: bd1a4651c66c5860cf8564b5ee4b85e8a1ca31f3
+    :commit: 3846f4f8a0d72f4bc6c3815458efc05f88b65080
     :git: https://github.com/maxcampolo/VideoCore.git
 
 SPEC CHECKSUMS:
   boost: 6c5c8d8daef26ac83c1e1c00ad14de62b80161d7
   glm: df8ca1b7e522a3cca213bb2913d666b6579c8d78
   UriParser-cpp: cbbe00080ee432ec4833dca863a7fc83adc9b01a
-  VideoCore: 71218bd20a3da724b60639b4359fc64cccaf9b1e
+  VideoCore: 006b9f8d994c73a7c92926aef90bda3894906ef2
 
 COCOAPODS: 0.39.0.beta.4
