@@ -1,0 +1,28 @@
+{
+  "name": "glm",
+  "version": "0.9.4.6",
+  "summary": "OpenGL Mathematics",
+  "description": "Forked from http://glm.g-truc.net",
+  "homepage": "https://github.com/maxcampolo/glm",
+  "license": "see LICENSE.txt",
+  "authors": {
+    "Max Campolo": "mc@mc.com"
+  },
+  "source": {
+    "git": "https://github.com/maxcampolo/glm.git",
+    "tag": "0.9.4.6"
+  },
+  "requires_arc": false,
+  "header_dir": "glm",
+  "header_mappings_dir": "glm",
+  "platforms": {
+    "ios": "5.0",
+    "osx": "10.7"
+  },
+  "source_files": "glm/**/*{.h,.hpp}",
+  "xcconfig": {
+    "LIBRARY_SEARCH_PATHS": "$(PODS_ROOT)/glm"
+  },
+  "preserve_paths": "glm/**/*{.h,.hpp,.inl}",
+  "public_header_files": "glm/**/*{.h,.hpp,.inl}"
+}
