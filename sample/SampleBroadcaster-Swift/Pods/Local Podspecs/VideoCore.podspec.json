@@ -84,7 +84,8 @@
     },
     {
       "name": "Filters",
-      "source_files": "filters/**/*.{h*,cpp}"
+      "source_files": "filters/**/*.{h*,cpp}",
+      "header_dir": "videocore"
     }
   ]
 }

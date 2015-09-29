@@ -24,8 +24,7 @@
  */
 #ifndef videocore_BasicVideoFilterBGRA_h
 #define videocore_BasicVideoFilterBGRA_h
-//#include <videocore/filters/IVideoFilter.hpp>
-#include "IVideoFilter.hpp"
+#include <videocore/filters/IVideoFilter.hpp>
 
 namespace videocore {
     namespace filters {

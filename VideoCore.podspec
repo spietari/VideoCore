@@ -58,6 +58,7 @@ Pod::Spec.new do |s|
   s.subspec 'Filters' do |ss|
 	ss.source_files = 'filters/**/*.{h*,cpp}'
 	ss.header_dir = 'videocore'
+	ss.header_mappings_dir = '.'
   end
 
   s.frameworks          = [ 'VideoToolbox', 'AudioToolbox', 'AVFoundation', 'CFNetwork', 'CoreMedia',
