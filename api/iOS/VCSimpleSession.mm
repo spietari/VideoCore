@@ -264,9 +264,12 @@ namespace videocore { namespace simpleApi {
 - (void) setRtmpSessionState:(VCSessionState)rtmpSessionState
 {
     _rtmpSessionState = rtmpSessionState;
-    if(self.delegate) {
-        [self.delegate connectionStatusChanged:rtmpSessionState];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // trigger in main thread, avoid autolayout engine exception
+        if(self.delegate) {
+                [self.delegate connectionStatusChanged:rtmpSessionState];
+        }
+    });
 }
 - (VCSessionState) rtmpSessionState
 {
@@ -291,10 +294,10 @@ namespace videocore { namespace simpleApi {
 }
 - (void) setAudioChannelCount:(int)channelCount
 {
-    _audioChannelCount = MIN(2, MAX(channelCount,2)); // We can only support a channel count of 2 with AAC
+    _audioChannelCount = MAX(1, MIN(channelCount, 2));
 
     if(m_audioMixer) {
-        m_audioMixer->setChannelCount(channelCount);
+        m_audioMixer->setChannelCount(_audioChannelCount);
     }
 }
 - (int) audioChannelCount
@@ -523,7 +526,7 @@ namespace videocore { namespace simpleApi {
 {
     std::stringstream uri ;
     uri << (rtmpUrl ? [rtmpUrl UTF8String] : "") << "/" << (streamKey ? [streamKey UTF8String] : "");
-
+    
     m_outputSession.reset(
                           new videocore::RTMPSession ( uri.str(),
                                                       [=](videocore::RTMPSession& session,
@@ -550,7 +553,6 @@ namespace videocore { namespace simpleApi {
                                                               case kClientStateError:
                                                                   self.rtmpSessionState = VCSessionStateError;
                                                                   [self endRtmpSession];
-                                                                  self->m_outputSession.reset();
                                                                   break;
                                                               case kClientStateNotConnected:
                                                                   self.rtmpSessionState = VCSessionStateEnded;
@@ -584,7 +586,7 @@ namespace videocore { namespace simpleApi {
                                                   if ([bSelf.delegate respondsToSelector:@selector(detectedThroughput:videoRate:)]) {
                                                       [bSelf.delegate detectedThroughput:predicted videoRate:video->bitrate()];
                                                   }
-                                                  
+
 
                                                   int videoBr = 0;
 
