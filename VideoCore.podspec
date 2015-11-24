@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
 
   s.header_dir          = 'videocore'
   s.header_mappings_dir = '.'
- # s.public_header_files = 'api/**/*.h'
 
   s.source_files        = [ 'mixers/**/*.h*', 'mixers/**/*.cpp', 'mixers/**/*.m*', 
                             'rtmp/**/*.h*', 'rtmp/**/*.cpp', 'rtmp/**/*.m*',
