@@ -11,13 +11,13 @@ Pod::Spec.new do |s|
   s.homepage            = "https://github.com/jgh-/VideoCore"
   s.license             = 'MIT'
   s.authors             = { "James Hurley" => "jamesghurley@gmail.com" }
-  s.source              = { :git => "https://github.com/jgh-/VideoCore.git", :tag => s.version.to_s }
+  s.source              = { :git => "https://github.com/jgh-/VideoCore.git", :tag => s.version.to_s, :submodules => true }
 
   s.requires_arc        = false
 
   s.header_dir          = 'videocore'
   s.header_mappings_dir = '.'
-  s.public_header_files = 'api/**/*.h'
+ # s.public_header_files = 'api/**/*.h'
 
   s.source_files        = [ 'mixers/**/*.h*', 'mixers/**/*.cpp', 'mixers/**/*.m*', 
                             'rtmp/**/*.h*', 'rtmp/**/*.cpp', 'rtmp/**/*.m*',
@@ -44,4 +44,18 @@ Pod::Spec.new do |s|
   # Before we can get OS X deployment working, we'll need to use sub-specs to
   # separate out the source files for OS X vs. iOS
   #s.osx.deployment_target = '10.7'
+
+  s.subspec 'Swift' do |swift|
+    swift.public_header_files = 'api/**/*.h'
+    swift.source_files        = [ 'mixers/**/*.h*', 'mixers/**/*.cpp', 'mixers/**/*.m*',
+                            'rtmp/**/*.h*', 'rtmp/**/*.cpp', 'rtmp/**/*.m*',
+                            'sources/**/*.h*', 'sources/**/*.cpp', 'sources/**/*.m*',
+                            'stream/**/*.h*', 'stream/**/*.cpp', 'stream/**/*.m*',
+                            'system/**/*.h*', 'system/**/*.cpp', 'system/**/*.m*',
+                            'transforms/**/*.h*', 'transforms/**/*.cpp', 'transforms/**/*.m*',
+                            'api/**/*.h*', 'api/**/*.m*',
+                            'filters/**/*.cpp', 'filters/**/*.h*' ]
+    swift.ios.deployment_target = '8.0'
+  end
+
 end
