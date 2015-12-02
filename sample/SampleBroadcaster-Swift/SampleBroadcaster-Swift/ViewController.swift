@@ -32,6 +32,7 @@
 //
 
 import UIKit
+import VideoCore
 
 class ViewController: UIViewController, VCSessionDelegate
 {

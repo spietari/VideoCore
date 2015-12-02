@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		307938501C0F540F0034CC99 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3079384F1C0F540F0034CC99 /* AVFoundation.framework */; };
+		307938521C0F54170034CC99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307938511C0F54170034CC99 /* CoreGraphics.framework */; };
 		6C157D311AD9735A00C7FAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C157D301AD9735A00C7FAD3 /* AppDelegate.swift */; };
 		6C157D331AD9735A00C7FAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C157D321AD9735A00C7FAD3 /* ViewController.swift */; };
 		6C157D361AD9735A00C7FAD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C157D341AD9735A00C7FAD3 /* Main.storyboard */; };
 		6C157D381AD9735A00C7FAD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C157D371AD9735A00C7FAD3 /* Images.xcassets */; };
 		6C157D3B1AD9735A00C7FAD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C157D391AD9735A00C7FAD3 /* LaunchScreen.xib */; };
-		8B59A3127B38E02A4C90825C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6058F074796307839B7AC41D /* libPods.a */; };
+		F4E8F1BC5C20553C0499673E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6111A77B2C2074CA9709D4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A6111A77B2C2074CA9709D4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3079384F1C0F540F0034CC99 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		307938511C0F54170034CC99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		52BDC6247D214345603DA33E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		6058F074796307839B7AC41D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C157D2B1AD9735A00C7FAD3 /* SampleBroadcaster-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SampleBroadcaster-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C157D2F1AD9735A00C7FAD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C157D301AD9735A00C7FAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B59A3127B38E02A4C90825C /* libPods.a in Frameworks */,
+				307938521C0F54170034CC99 /* CoreGraphics.framework in Frameworks */,
+				307938501C0F540F0034CC99 /* AVFoundation.framework in Frameworks */,
+				F4E8F1BC5C20553C0499673E /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +90,9 @@
 		7569E797EB7C5A42BF24521D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6058F074796307839B7AC41D /* libPods.a */,
+				307938511C0F54170034CC99 /* CoreGraphics.framework */,
+				3079384F1C0F540F0034CC99 /* AVFoundation.framework */,
+				2A6111A77B2C2074CA9709D4 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,6 +118,7 @@
 				6C157D281AD9735A00C7FAD3 /* Frameworks */,
 				6C157D291AD9735A00C7FAD3 /* Resources */,
 				FDBE69581D94F3988CD5CE27 /* Copy Pods Resources */,
+				DC44D737646F466AF72B5D2B /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +189,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC44D737646F466AF72B5D2B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FDBE69581D94F3988CD5CE27 /* Copy Pods Resources */ = {
@@ -318,9 +342,16 @@
 			baseConfigurationReference = 95EC6354D0742E62CDCE2046 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "SampleBroadcaster-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "videocore.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SampleBroadcaster-Swift/VideoCore-Bridging-Header.h";
@@ -332,9 +363,16 @@
 			baseConfigurationReference = 52BDC6247D214345603DA33E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "SampleBroadcaster-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "videocore.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SampleBroadcaster-Swift/VideoCore-Bridging-Header.h";
