@@ -176,14 +176,14 @@ namespace videocore { namespace iOS {
                     
                     [session startRunning];
                     
-                    if(!bThis->m_orientationLocked) {
-                        if(bThis->m_useInterfaceOrientation) {
-                            [[NSNotificationCenter defaultCenter] addObserver:((id)bThis->m_callbackSession) selector:@selector(orientationChanged:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
-                        } else {
-                            [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-                            [[NSNotificationCenter defaultCenter] addObserver:((id)bThis->m_callbackSession) selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
-                        }
+                    // Observe device orientation notifications for reorienting camera source
+                    if(bThis->m_useInterfaceOrientation) {
+                        [[NSNotificationCenter defaultCenter] addObserver:((id)bThis->m_callbackSession) selector:@selector(orientationChanged:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
+                    } else {
+                        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+                        [[NSNotificationCenter defaultCenter] addObserver:((id)bThis->m_callbackSession) selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
                     }
+                    
                     [output release];
                 }
                 if (callbackBlock) {
