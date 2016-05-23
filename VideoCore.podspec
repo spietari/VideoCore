@@ -33,10 +33,10 @@ Pod::Spec.new do |s|
   s.libraries           = 'c++'
 
   s.dependency          'boost', '~> 1.51.0'
-  s.dependency          'glm', '~> 0.9.7.1'
+  s.dependency          'glm'
   s.dependency          'UriParser-cpp', '~> 0.1.3'
-
-  #s.xcconfig            = { "HEADER_SEARCH_PATHS" => "${PODS_ROOT}/boost" }
+  
+  s.xcconfig            = { "HEADER_SEARCH_PATHS" => "${PODS_ROOT}/boost" }
 
   s.ios.deployment_target = '5.0'
 
@@ -46,8 +46,15 @@ Pod::Spec.new do |s|
 
   s.subspec 'Swift' do |swift|
     swift.public_header_files = 'videocore/api/**/*.h'
-    swift.source_files = 'videocore/**/*{.h*, .cpp, .m*}'
-    #s.xcconfig            = { "USER_HEADER_SEARCH_PATHS" => "${PODS_ROOT}/videocore" }
+    swift.source_files        = [ 'videocore/mixers/**/*.h*', 'videocore/mixers/**/*.cpp', 'videocore/mixers/**/*.m*', 
+                            'videocore/rtmp/**/*.h*', 'videocore/rtmp/**/*.cpp', 'videocore/rtmp/**/*.m*',
+                            'videocore/sources/**/*.h*', 'videocore/sources/**/*.cpp', 'videocore/sources/**/*.m*',
+                            'videocore/stream/**/*.h*', 'videocore/stream/**/*.cpp', 'videocore/stream/**/*.m*',
+                            'videocore/system/**/*.h*', 'videocore/system/**/*.cpp', 'videocore/system/**/*.m*',
+                            'videocore/transforms/**/*.h*', 'videocore/transforms/**/*.cpp', 'videocore/transforms/**/*.m*',
+                            'videocore/api/**/*.h*', 'videocore/api/**/*.m*',
+                            'videocore/filters/**/*.cpp', 'videocore/filters/**/*.h*' ]
+	swift.xcconfig            = { "HEADER_SEARCH_PATHS" => "${PODS_ROOT}/VideoCore" }
     swift.ios.deployment_target = '8.0'
   end
 
