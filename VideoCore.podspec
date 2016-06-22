@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.header_dir          = 'videocore'
   s.header_mappings_dir = '.'
 
-  s.source_files        = [ 'mixers/**/*.h*', 'mixers/**/*.cpp', 'mixers/**/*.m*', 
+  s.source_files        = [ 'mixers/**/*.h*', 'mixers/**/*.cpp', 'mixers/**/*.m*',
                             'rtmp/**/*.h*', 'rtmp/**/*.cpp', 'rtmp/**/*.m*',
                             'sources/**/*.h*', 'sources/**/*.cpp', 'sources/**/*.m*',
                             'stream/**/*.h*', 'stream/**/*.cpp', 'stream/**/*.m*',
@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
   #s.osx.deployment_target = '10.7'
 
   s.subspec 'Swift' do |swift|
-    swift.public_header_files = 'api/**/*.h'
+    #swift.public_header_files = 'api/**/*.h'
     swift.source_files        = [ 'mixers/**/*.h*', 'mixers/**/*.cpp', 'mixers/**/*.m*',
                             'rtmp/**/*.h*', 'rtmp/**/*.cpp', 'rtmp/**/*.m*',
                             'sources/**/*.h*', 'sources/**/*.cpp', 'sources/**/*.m*',
